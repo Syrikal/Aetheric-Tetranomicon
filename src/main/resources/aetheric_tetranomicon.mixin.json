@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.syric.aetheric_tetranomicon.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinDoubleDrops"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "aetheric_tetranomicon.mixin-refmap.json"
+}

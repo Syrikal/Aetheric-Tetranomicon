@@ -1,0 +1,38 @@
+{
+    "key": "deep_aether_cruderoot",
+    "category": "wood",
+    "primary": 2.9,
+    "secondary": 1.6,
+    "tertiary": 6.2,
+    "durability": 512,
+    "integrityCost": 2,
+    "integrityGain": 5,
+    "magicCapacity": 102,
+    "toolLevel": "minecraft:gold",
+    "toolEfficiency": 3.5,
+    "improvements": {
+        "aetheric_tetranomicon/aetheric": 0
+    },
+    "tints": {
+        "glyph": "8177a5",
+        "texture": "8177a5"
+    },
+    "textures": [
+        "crude",
+        "wooden"
+    ],
+    "material": {
+        "items": [
+            "deep_aether:cruderoot_planks"
+        ]
+    },
+    "requiredTools": {
+        "cut": "minecraft:stone"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "deep_aether"
+        }
+    ]
+}

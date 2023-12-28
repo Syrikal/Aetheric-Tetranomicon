@@ -1,0 +1,38 @@
+{
+    "key": "deep_aether_yagroot",
+    "category": "wood",
+    "primary": 5.4,
+    "secondary": 2.5,
+    "tertiary": 8.2,
+    "durability": 1024,
+    "integrityCost": 2,
+    "integrityGain": 3,
+    "magicCapacity": 108,
+    "toolLevel": "minecraft:stone",
+    "toolEfficiency": 4.5,
+    "improvements": {
+        "aetheric_tetranomicon/aetheric": 0
+    },
+    "tints": {
+        "glyph": "5c4e6a",
+        "texture": "5c4e6a"
+    },
+    "textures": [
+        "crude",
+        "wooden"
+    ],
+    "material": {
+        "items": [
+            "deep_aether:yagroot_planks"
+        ]
+    },
+    "requiredTools": {
+        "axe_dig": "minecraft:netherite"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "deep_aether"
+        }
+    ]
+}

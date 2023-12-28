@@ -1,0 +1,142 @@
+[
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "deep_aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "deep_aether:stratus_axe"
+            ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [
+                "double/basic_axe_left",
+                "basic_axe/deep_aether_stratus"
+            ],
+            "double/head_right": [
+                "double/butt_right",
+                "butt/deep_aether_stratus"
+            ],
+            "double/handle": [
+                "double/basic_handle",
+                "basic_handle/aether_skyroot"
+            ]
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "deep_aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "deep_aether:stratus_hoe"
+            ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [
+                "double/hoe_left",
+                "hoe/deep_aether_stratus"
+            ],
+            "double/head_right": [
+                "double/butt_right",
+                "butt/deep_aether_stratus"
+            ],
+            "double/handle": [
+                "double/basic_handle",
+                "basic_handle/aether_skyroot"
+            ]
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "deep_aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "deep_aether:stratus_pickaxe"
+            ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [
+                "double/basic_pickaxe_left",
+                "basic_pickaxe/deep_aether_stratus"
+            ],
+            "double/head_right": [
+                "double/basic_pickaxe_right",
+                "basic_pickaxe/deep_aether_stratus"
+            ],
+            "double/handle": [
+                "double/basic_handle",
+                "basic_handle/aether_skyroot"
+            ]
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "deep_aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "deep_aether:stratus_shovel"
+            ]
+        },
+        "item": "tetra:modular_single",
+        "modules": {
+            "single/head": [
+                "single/basic_shovel",
+                "basic_shovel/deep_aether_stratus"
+            ],
+            "single/handle": [
+                "single/basic_handle",
+                "basic_handle/aether_skyroot"
+            ]
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "deep_aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "deep_aether:stratus_sword"
+            ]
+        },
+        "item": "tetra:modular_sword",
+        "modules": {
+            "sword/blade": [
+                "sword/basic_blade",
+                "basic_blade/deep_aether_stratus"
+            ],
+            "sword/hilt": [
+                "sword/basic_hilt",
+                "basic_hilt/aether_skyroot"
+            ],
+            "sword/pommel": [
+                "sword/decorative_pommel",
+                "decorative_pommel/deep_aether_stratus"
+            ],
+            "sword/guard": [
+                "sword/makeshift_guard",
+                "makeshift_guard/deep_aether_stratus"
+            ]
+        }
+    }
+]

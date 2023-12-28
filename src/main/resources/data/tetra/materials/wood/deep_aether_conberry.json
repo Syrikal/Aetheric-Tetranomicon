@@ -1,0 +1,38 @@
+{
+    "key": "deep_aether_conberry",
+    "category": "wood",
+    "primary": 5.5,
+    "secondary": 2.6,
+    "tertiary": 5,
+    "durability": 1024,
+    "integrityCost": 2,
+    "integrityGain": 7,
+    "magicCapacity": 96,
+    "toolLevel": "minecraft:stone",
+    "toolEfficiency": 4,
+    "improvements": {
+        "aetheric_tetranomicon/aetheric": 0
+    },
+    "tints": {
+        "glyph": "946f53",
+        "texture": "946f53"
+    },
+    "textures": [
+        "crude",
+        "wooden"
+    ],
+    "material": {
+        "items": [
+            "deep_aether:conberry_planks"
+        ]
+    },
+    "requiredTools": {
+        "cut": "minecraft:diamond"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "deep_aether"
+        }
+    ]
+}

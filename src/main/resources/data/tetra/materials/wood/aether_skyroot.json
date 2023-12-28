@@ -1,0 +1,39 @@
+{
+    "key": "aether_skyroot",
+    "category": "wood",
+    "primary": 3,
+    "secondary": 1.4,
+    "tertiary": 6,
+    "durability": 59,
+    "integrityCost": 1,
+    "integrityGain": 4,
+    "magicCapacity": 90,
+    "toolLevel": "minecraft:wood",
+    "toolEfficiency": 2,
+    "improvements": {
+        "aetheric_tetranomicon/harvester": 0,
+        "aetheric_tetranomicon/aetheric": 0
+    },
+    "tints": {
+        "glyph": "968159",
+        "texture": "968159"
+    },
+    "textures": [
+        "crude",
+        "wooden"
+    ],
+    "material": {
+        "items": [
+            "aether:skyroot_planks"
+        ]
+    },
+    "requiredTools": {
+        "axe_dig": "minecraft:wood"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "aether"
+        }
+    ]
+}

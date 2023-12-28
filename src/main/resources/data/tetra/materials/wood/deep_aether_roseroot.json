@@ -1,0 +1,41 @@
+{
+    "key": "deep_aether_roseroot",
+    "category": "wood",
+    "primary": 5.5,
+    "secondary": 2.3,
+    "tertiary": 6.5,
+    "durability": 768,
+    "integrityCost": 2,
+    "integrityGain": 6,
+    "magicCapacity": 144,
+    "toolLevel": "minecraft:stone",
+    "toolEfficiency": 4,
+    "improvements": {
+        "aetheric_tetranomicon/aetheric": 0
+    },
+    "effects": {
+        "stabilizing": 15
+    },
+    "tints": {
+        "glyph": "efb2bb",
+        "texture": "efb2bb"
+    },
+    "textures": [
+        "crude",
+        "wooden"
+    ],
+    "material": {
+        "items": [
+            "deep_aether:roseroot_planks"
+        ]
+    },
+    "requiredTools": {
+        "cut": "minecraft:iron"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "deep_aether"
+        }
+    ]
+}

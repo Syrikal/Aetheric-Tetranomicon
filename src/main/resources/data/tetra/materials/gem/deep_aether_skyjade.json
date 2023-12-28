@@ -1,0 +1,38 @@
+{
+    "key": "deep_aether_skyjade",
+    "category": "gem",
+    "primary": 5,
+    "secondary": 3.2,
+    "tertiary": 0,
+    "durability": 150,
+    "integrityCost": 2,
+    "integrityGain": 2,
+    "magicCapacity": 1,
+    "toolLevel": "minecraft:iron",
+    "toolEfficiency": 10,
+    "improvements": {
+        "aetheric_tetranomicon/aetheric": 0
+    },
+    "tints": {
+        "glyph": "b2e865",
+        "texture": "b2e865"
+    },
+    "textures": [
+        "shiny",
+        "crude"
+    ],
+    "material": {
+        "items": [
+            "deep_aether:skyjade"
+        ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:gold"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "deep_aether"
+        }
+    ]
+}

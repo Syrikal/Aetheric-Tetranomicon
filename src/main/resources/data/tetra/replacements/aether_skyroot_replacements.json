@@ -1,0 +1,142 @@
+[
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "aether:skyroot_axe"
+            ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [
+                "double/basic_axe_left",
+                "basic_axe/aether_skyroot"
+            ],
+            "double/head_right": [
+                "double/butt_right",
+                "butt/aether_skyroot"
+            ],
+            "double/handle": [
+                "double/basic_handle",
+                "basic_handle/aether_skyroot"
+            ]
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "aether:skyroot_hoe"
+            ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [
+                "double/hoe_left",
+                "hoe/aether_skyroot"
+            ],
+            "double/head_right": [
+                "double/butt_right",
+                "butt/aether_skyroot"
+            ],
+            "double/handle": [
+                "double/basic_handle",
+                "basic_handle/aether_skyroot"
+            ]
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "aether:skyroot_pickaxe"
+            ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [
+                "double/basic_pickaxe_left",
+                "basic_pickaxe/aether_skyroot"
+            ],
+            "double/head_right": [
+                "double/basic_pickaxe_right",
+                "basic_pickaxe/aether_skyroot"
+            ],
+            "double/handle": [
+                "double/basic_handle",
+                "basic_handle/aether_skyroot"
+            ]
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "aether:skyroot_shovel"
+            ]
+        },
+        "item": "tetra:modular_single",
+        "modules": {
+            "single/head": [
+                "single/basic_shovel",
+                "basic_shovel/aether_skyroot"
+            ],
+            "single/handle": [
+                "single/basic_handle",
+                "basic_handle/aether_skyroot"
+            ]
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "aether:skyroot_sword"
+            ]
+        },
+        "item": "tetra:modular_sword",
+        "modules": {
+            "sword/blade": [
+                "sword/basic_blade",
+                "basic_blade/aether_skyroot"
+            ],
+            "sword/hilt": [
+                "sword/basic_hilt",
+                "basic_hilt/aether_skyroot"
+            ],
+            "sword/pommel": [
+                "sword/decorative_pommel",
+                "decorative_pommel/aether_skyroot"
+            ],
+            "sword/guard": [
+                "sword/makeshift_guard",
+                "makeshift_guard/aether_skyroot"
+            ]
+        }
+    }
+]

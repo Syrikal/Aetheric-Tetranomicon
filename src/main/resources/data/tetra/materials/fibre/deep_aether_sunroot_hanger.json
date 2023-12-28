@@ -1,0 +1,38 @@
+{
+    "key": "deep_aether_sunroot_hanger",
+    "category": "fibre",
+    "primary": 2,
+    "secondary": 3.4,
+    "tertiary": 3,
+    "durability": 1280,
+    "integrityCost": 2,
+    "integrityGain": 7,
+    "magicCapacity": 90,
+    "toolLevel": 0,
+    "toolEfficiency": 0,
+    "improvements": {
+        "aetheric_tetranomicon/aetheric": 0
+    },
+    "tints": {
+        "glyph": "ffefd6",
+        "texture": "ffefd6"
+    },
+    "textures": [
+        "crude",
+        "default"
+    ],
+    "material": {
+        "items": [
+            "deep_aether:sunroot_hanger"
+        ]
+    },
+    "requiredTools": {
+        "cut": "minecraft:iron"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "deep_aether"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "key": "deep_aether_stratus",
+    "category": "metal",
+    "primary": 7,
+    "secondary": 2.7,
+    "tertiary": 3.2,
+    "durability": 2031,
+    "integrityCost": 2,
+    "integrityGain": 6,
+    "magicCapacity": 90,
+    "toolLevel": "minecraft:netherite",
+    "toolEfficiency": 9,
+    "improvements": {
+        "aetheric_tetranomicon/levitator": 0,
+        "aetheric_tetranomicon/aetheric": 0
+    },
+    "tints": {
+        "glyph": "834f99",
+        "texture": "834f99"
+    },
+    "textures": [
+        "shiny",
+        "metal",
+        "default"
+    ],
+    "material": {
+        "items": [
+            "deep_aether:stratus_ingot"
+        ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:iron"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "deep_aether"
+        }
+    ]
+}

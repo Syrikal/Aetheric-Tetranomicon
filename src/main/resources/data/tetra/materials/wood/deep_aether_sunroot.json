@@ -1,0 +1,38 @@
+{
+    "key": "deep_aether_sunroot",
+    "category": "wood",
+    "primary": 4.6,
+    "secondary": 1.4,
+    "tertiary": 6,
+    "durability": 1280,
+    "integrityCost": 2,
+    "integrityGain": 6,
+    "magicCapacity": 120,
+    "toolLevel": "minecraft:gold",
+    "toolEfficiency": 4,
+    "improvements": {
+        "aetheric_tetranomicon/aetheric": 0
+    },
+    "tints": {
+        "glyph": "efd2b9",
+        "texture": "efd2b9"
+    },
+    "textures": [
+        "crude",
+        "wooden"
+    ],
+    "material": {
+        "items": [
+            "deep_aether:sunroot_planks"
+        ]
+    },
+    "requiredTools": {
+        "cut": "minecraft:iron"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "deep_aether"
+        }
+    ]
+}

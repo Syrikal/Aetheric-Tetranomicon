@@ -1,0 +1,45 @@
+{
+    "key": "deep_aether_aseterite",
+    "category": "stone",
+    "primary": 4.4,
+    "secondary": 4,
+    "tertiary": 0,
+    "durability": 448,
+    "integrityCost": 1,
+    "integrityGain": 3,
+    "magicCapacity": 90,
+    "toolLevel": "minecraft:stone",
+    "toolEfficiency": 6,
+    "improvements": {
+        "aetheric_tetranomicon/aetheric": 0
+    },
+    "effects": {
+        "sweeping": [
+            3,
+            1
+        ]
+    },
+    "tints": {
+        "glyph": "897a87",
+        "texture": "897a87"
+    },
+    "textures": [
+        "grainy",
+        "crude",
+        "default"
+    ],
+    "material": {
+        "items": [
+            "deep_aether:aseterite"
+        ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:gold"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "deep_aether"
+        }
+    ]
+}

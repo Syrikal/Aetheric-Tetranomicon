@@ -1,0 +1,142 @@
+[
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "aether:holystone_axe"
+            ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [
+                "double/basic_axe_left",
+                "basic_axe/aether_holystone"
+            ],
+            "double/head_right": [
+                "double/butt_right",
+                "butt/aether_holystone"
+            ],
+            "double/handle": [
+                "double/basic_handle",
+                "basic_handle/aether_skyroot"
+            ]
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "aether:holystone_hoe"
+            ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [
+                "double/hoe_left",
+                "hoe/aether_holystone"
+            ],
+            "double/head_right": [
+                "double/butt_right",
+                "butt/aether_holystone"
+            ],
+            "double/handle": [
+                "double/basic_handle",
+                "basic_handle/aether_skyroot"
+            ]
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "aether:holystone_pickaxe"
+            ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [
+                "double/basic_pickaxe_left",
+                "basic_pickaxe/aether_holystone"
+            ],
+            "double/head_right": [
+                "double/basic_pickaxe_right",
+                "basic_pickaxe/aether_holystone"
+            ],
+            "double/handle": [
+                "double/basic_handle",
+                "basic_handle/aether_skyroot"
+            ]
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "aether:holystone_shovel"
+            ]
+        },
+        "item": "tetra:modular_single",
+        "modules": {
+            "single/head": [
+                "single/basic_shovel",
+                "basic_shovel/aether_holystone"
+            ],
+            "single/handle": [
+                "single/basic_handle",
+                "basic_handle/aether_skyroot"
+            ]
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "aether:holystone_sword"
+            ]
+        },
+        "item": "tetra:modular_sword",
+        "modules": {
+            "sword/blade": [
+                "sword/basic_blade",
+                "basic_blade/aether_holystone"
+            ],
+            "sword/hilt": [
+                "sword/basic_hilt",
+                "basic_hilt/aether_skyroot"
+            ],
+            "sword/pommel": [
+                "sword/decorative_pommel",
+                "decorative_pommel/aether_holystone"
+            ],
+            "sword/guard": [
+                "sword/makeshift_guard",
+                "makeshift_guard/aether_holystone"
+            ]
+        }
+    }
+]

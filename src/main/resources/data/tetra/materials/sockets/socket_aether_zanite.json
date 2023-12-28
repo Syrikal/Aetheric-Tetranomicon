@@ -1,0 +1,36 @@
+{
+    "key": "socket_aether_zanite",
+    "hidden": true,
+    "category": "socket",
+    "primary": 0,
+    "secondary": 0,
+    "tertiary": 0,
+    "durability": 512.0,
+    "integrityCost": 1,
+    "integrityGain": 0,
+    "magicCapacity": 0,
+    "toolLevel": 0,
+    "toolEfficiency": 2.0,
+    "attributes": {
+        "**generic.attack_damage": 0.1
+    },
+    "tints": {
+        "glyph": "763ace",
+        "texture": "763ace"
+    },
+    "textures": [
+        "default"
+    ],
+    "experienceCost": 2,
+    "material": {
+        "items": [
+            "aether:zanite_gemstone"
+        ]
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "aether"
+        }
+    ]
+}
