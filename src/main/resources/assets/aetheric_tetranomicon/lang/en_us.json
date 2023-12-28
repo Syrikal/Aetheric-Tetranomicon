@@ -40,5 +40,9 @@
     "tetra.material.deep_aether_yagroot_vines.prefix": "Yagroot Vine",
     
     "tetra.material.socket_deep_aether_skyjade": "Skyjade socket",
-    "tetra.material.socket_deep_aether_skyjade.prefix": "§qSkyjade§r"
+    "tetra.material.socket_deep_aether_skyjade.prefix": "§qSkyjade§r",
+
+
+    "tetra.stats.ambrosia_seeker":"Ambrosia Seeker",
+    "tetra.stats.ambrosia_seeker.tooltip":"Test"
 }

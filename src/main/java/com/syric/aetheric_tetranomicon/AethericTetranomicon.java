@@ -1,9 +1,7 @@
 package com.syric.aetheric_tetranomicon;
 
 import com.mojang.logging.LogUtils;
-import com.syric.aetheric_tetranomicon.effects.AmbrosiaSeekerEffect;
-import com.syric.aetheric_tetranomicon.effects.LevitatorEffect;
-import com.syric.aetheric_tetranomicon.effects.TenacityEffect;
+import com.syric.aetheric_tetranomicon.effects.*;
 import com.syric.aetheric_tetranomicon.registry.ATItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -19,7 +17,7 @@ public class AethericTetranomicon {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "aetheric_tetranomicon";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
 
 //    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
@@ -51,68 +49,17 @@ public class AethericTetranomicon {
         MinecraftForge.EVENT_BUS.register(this);
 
         // Add effect registration here
+        MinecraftForge.EVENT_BUS.register(new AethericEffect());
         MinecraftForge.EVENT_BUS.register(new AmbrosiaSeekerEffect());
-        MinecraftForge.EVENT_BUS.register(new TenacityEffect());
+        MinecraftForge.EVENT_BUS.register(new HarvesterEffect());
         MinecraftForge.EVENT_BUS.register(new LevitatorEffect());
-
-
-
+        MinecraftForge.EVENT_BUS.register(new TenacityEffect());
+        MinecraftForge.EVENT_BUS.register(new ValkyrieEffect());
 
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         // Register the Deferred Register to the mod event bus so items get registered
         ATItems.ITEMS.register(modEventBus);
-
-//        // Register the commonSetup method for modloading
-//        modEventBus.addListener(this::commonSetup);
-//
-//        // Register the Deferred Register to the mod event bus so blocks get registered
-//        BLOCKS.register(modEventBus);
-
-//        // Register the Deferred Register to the mod event bus so tabs get registered
-//        CREATIVE_MODE_TABS.register(modEventBus);
-//
-//        // Register the item to a creative tab
-//        modEventBus.addListener(this::addCreative);
-//
-//        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-//        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
-//    private void commonSetup(final FMLCommonSetupEvent event) {
-//        // Some common setup code
-//        LOGGER.info("HELLO FROM COMMON SETUP");
-//
-//        if (Config.logDirtBlock)
-//            LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
-//
-//        LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
-//
-//        Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
-//    }
-//
-//    // Add the example block item to the building blocks tab
-//    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-//        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-//            event.accept(EXAMPLE_BLOCK_ITEM);
-//    }
-//
-//    // You can use SubscribeEvent and let the Event Bus discover methods to call
-//    @SubscribeEvent
-//    public void onServerStarting(ServerStartingEvent event) {
-//        // Do something when the server starts
-//        LOGGER.info("HELLO from server starting");
-//    }
-//
-//    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-//    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-//    public static class ClientModEvents
-//    {
-//        @SubscribeEvent
-//        public static void onClientSetup(FMLClientSetupEvent event) {
-//            // Some client setup code
-//            LOGGER.info("HELLO FROM CLIENT SETUP");
-//            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-//        }
-//    }
 }
