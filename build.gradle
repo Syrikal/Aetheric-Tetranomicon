@@ -57,6 +57,8 @@ minecraft {
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             property 'forge.logging.console.level', 'debug'
 
+//            arg "-mixin.config=aetheric_tetranomicon.mixin.json"
+
             mods {
                 "${mod_id}" {
                     source sourceSets.main
@@ -67,11 +69,15 @@ minecraft {
         client {
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', mod_id
+
+            arg "-mixin.config=aetheric_tetranomicon.mixin.json"
         }
 
         server {
             property 'forge.enabledGameTestNamespaces', mod_id
             args '--nogui'
+
+            arg "-mixin.config=aetheric_tetranomicon.mixin.json"
         }
 
         // This run config launches GameTestServer and runs all registered gametests, then exits.
@@ -124,14 +130,21 @@ dependencies {
     //Aether
     implementation fg.deobf("curse.maven:aether-255308:4926220")
 
+    //Aether Redux (requires Aether, terrablender and aeroblender)
+    implementation fg.deobf("curse.maven:aether-redux-867237:4990922")
+
     //Deep Aether (requires Aether, geckolib, terrablender, and aeroblender)
     implementation fg.deobf("curse.maven:deep-aether-852465:4861346")
+
+    //Requirements
     implementation fg.deobf("curse.maven:geckolib-388172:4933987")
     implementation fg.deobf("curse.maven:terrablender-563928:4647094")
     implementation fg.deobf("curse.maven:aeroblender-879879:4789008")
 
     //JEI
     implementation fg.deobf("curse.maven:jei-238222:4712868")
+
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
 }
 

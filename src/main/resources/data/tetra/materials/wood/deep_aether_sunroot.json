@@ -27,7 +27,7 @@
         ]
     },
     "requiredTools": {
-        "cut": "minecraft:iron"
+        "axe_dig": "minecraft:iron"
     },
     "conditions": [
         {

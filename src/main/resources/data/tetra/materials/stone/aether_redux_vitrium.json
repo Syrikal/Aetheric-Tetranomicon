@@ -1,39 +1,43 @@
 {
-    "key": "aether_holystone",
+    "key": "aether_redux_vitrium",
     "category": "stone",
-    "primary": 4,
-    "secondary": 4.5,
+    "primary": 5.4,
+    "secondary": 6.5,
     "tertiary": 0,
-    "durability": 131,
-    "integrityCost": 1,
-    "integrityGain": 4,
-    "magicCapacity": 30,
-    "toolLevel": "minecraft:stone",
+    "durability": 768,
+    "integrityCost": 3,
+    "integrityGain": 2,
+    "magicCapacity": 90,
+    "toolLevel": "minecraft:iron",
     "toolEfficiency": 4,
     "improvements": {
         "aetheric_tetranomicon/aetheric": 0,
         "aetheric_tetranomicon/ambrosia_seeker": 0
     },
+    "effects": {
+        "crushing": 2
+    },
     "tints": {
-        "glyph": "A3A3A3",
-        "texture": "A3A3A3"
+        "glyph": "373649",
+        "texture": "373649"
     },
     "textures": [
+        "grainy",
         "crude",
         "default"
     ],
     "material": {
         "items": [
-            "aether:holystone"
+            "aether_redux:vitrium"
         ]
     },
     "requiredTools": {
-        "hammer_dig": "minecraft:wood"
+        "hammer_dig": "minecraft:stone"
     },
     "conditions": [
         {
             "type": "forge:mod_loaded",
-            "modid": "aether"
+            "modid": "aether_redux"
         }
     ]
 }

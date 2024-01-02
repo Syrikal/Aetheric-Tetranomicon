@@ -1,24 +1,21 @@
 {
-    "key": "deep_aether_roseroot",
+    "key": "aether_redux_fieldsprout",
     "category": "wood",
-    "primary": 5.5,
-    "secondary": 2.3,
-    "tertiary": 6.2,
-    "durability": 768,
+    "primary": 3.4,
+    "secondary": 2.7,
+    "tertiary": 6.5,
+    "durability": 1280,
     "integrityCost": 2,
     "integrityGain": 6,
-    "magicCapacity": 144,
-    "toolLevel": "minecraft:stone",
+    "magicCapacity": 114,
+    "toolLevel": "minecraft:gold",
     "toolEfficiency": 4,
     "improvements": {
         "aetheric_tetranomicon/aetheric": 0
     },
-    "effects": {
-        "stabilizing": 15
-    },
     "tints": {
-        "glyph": "efb2bb",
-        "texture": "efb2bb"
+        "glyph": "d4847b",
+        "texture": "d4847b"
     },
     "textures": [
         "crude",
@@ -26,16 +23,16 @@
     ],
     "material": {
         "items": [
-            "deep_aether:roseroot_planks"
+            "aether_redux:fieldsprout_planks"
         ]
     },
     "requiredTools": {
-        "axe_dig": "minecraft:iron"
+        "axe_dig": "minecraft:stone"
     },
     "conditions": [
         {
             "type": "forge:mod_loaded",
-            "modid": "deep_aether"
+            "modid": "aether_redux"
         }
     ]
 }

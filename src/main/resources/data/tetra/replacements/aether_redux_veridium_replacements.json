@@ -3,57 +3,23 @@
         "conditions": [
             {
                 "type": "forge:mod_loaded",
-                "modid": "aether"
+                "modid": "aether_redux"
             }
         ],
         "predicate": {
             "items": [
-                "aether:gravitite_axe"
-            ]
-        },
-        "item": "tetra:modular_double",
-        "modules": {
-            "double/head_left": [
-                "double/basic_axe_left",
-                "basic_axe/aether_gravitite"
-            ],
-            "double/head_right": [
-                "double/butt_right",
-                "butt/aether_gravitite"
-            ],
-            "double/handle": [
-                "double/basic_handle",
-                "basic_handle/aether_skyroot"
-            ]
-        },
-        "improvements": {
-            "double/head_left:aetheric_tetranomicon/levitator": 0,
-            "double/head_right:aetheric_tetranomicon/levitator": 0,
-            "double/head_left:aetheric_tetranomicon/aetheric": 0,
-            "double/head_right:aetheric_tetranomicon/aetheric": 0
-        }
-    },
-    {
-        "conditions": [
-            {
-                "type": "forge:mod_loaded",
-                "modid": "aether"
-            }
-        ],
-        "predicate": {
-            "items": [
-                "aether:gravitite_hoe"
+                "aether_redux:veridium_hoe"
             ]
         },
         "item": "tetra:modular_double",
         "modules": {
             "double/head_left": [
                 "double/hoe_left",
-                "hoe/aether_gravitite"
+                "hoe/aether_redux_veridium"
             ],
             "double/head_right": [
                 "double/butt_right",
-                "butt/aether_gravitite"
+                "butt/aether_redux_veridium"
             ],
             "double/handle": [
                 "double/basic_handle",
@@ -61,8 +27,6 @@
             ]
         },
         "improvements": {
-            "double/head_left:aetheric_tetranomicon/levitator": 0,
-            "double/head_right:aetheric_tetranomicon/levitator": 0,
             "double/head_left:aetheric_tetranomicon/aetheric": 0,
             "double/head_right:aetheric_tetranomicon/aetheric": 0
         }
@@ -71,23 +35,55 @@
         "conditions": [
             {
                 "type": "forge:mod_loaded",
-                "modid": "aether"
+                "modid": "aether_redux"
             }
         ],
         "predicate": {
             "items": [
-                "aether:gravitite_pickaxe"
+                "aether_redux:veridium_hoe"
+            ]
+        },
+        "item": "tetra:modular_double",
+        "modules": {
+            "double/head_left": [
+                "double/hoe_left",
+                "hoe/aether_redux_veridium"
+            ],
+            "double/head_right": [
+                "double/butt_right",
+                "butt/aether_redux_veridium"
+            ],
+            "double/handle": [
+                "double/basic_handle",
+                "basic_handle/aether_skyroot"
+            ]
+        },
+        "improvements": {
+            "double/head_left:aetheric_tetranomicon/aetheric": 0,
+            "double/head_right:aetheric_tetranomicon/aetheric": 0
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "aether_redux"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "aether_redux:veridium_pickaxe"
             ]
         },
         "item": "tetra:modular_double",
         "modules": {
             "double/head_left": [
                 "double/basic_pickaxe_left",
-                "basic_pickaxe/aether_gravitite"
+                "basic_pickaxe/aether_redux_veridium"
             ],
             "double/head_right": [
                 "double/basic_pickaxe_right",
-                "basic_pickaxe/aether_gravitite"
+                "basic_pickaxe/aether_redux_veridium"
             ],
             "double/handle": [
                 "double/basic_handle",
@@ -95,8 +91,6 @@
             ]
         },
         "improvements": {
-            "double/head_left:aetheric_tetranomicon/levitator": 0,
-            "double/head_right:aetheric_tetranomicon/levitator": 0,
             "double/head_left:aetheric_tetranomicon/aetheric": 0,
             "double/head_right:aetheric_tetranomicon/aetheric": 0
         }
@@ -105,19 +99,19 @@
         "conditions": [
             {
                 "type": "forge:mod_loaded",
-                "modid": "aether"
+                "modid": "aether_redux"
             }
         ],
         "predicate": {
             "items": [
-                "aether:gravitite_shovel"
+                "aether_redux:veridium_shovel"
             ]
         },
         "item": "tetra:modular_single",
         "modules": {
             "single/head": [
                 "single/basic_shovel",
-                "basic_shovel/aether_gravitite"
+                "basic_shovel/aether_redux_veridium"
             ],
             "single/handle": [
                 "single/basic_handle",
@@ -125,7 +119,6 @@
             ]
         },
         "improvements": {
-            "single/head:aetheric_tetranomicon/levitator": 0,
             "single/head:aetheric_tetranomicon/aetheric": 0
         }
     },
@@ -133,19 +126,19 @@
         "conditions": [
             {
                 "type": "forge:mod_loaded",
-                "modid": "aether"
+                "modid": "aether_redux"
             }
         ],
         "predicate": {
             "items": [
-                "aether:gravitite_sword"
+                "aether_redux:veridium_sword"
             ]
         },
         "item": "tetra:modular_sword",
         "modules": {
             "sword/blade": [
                 "sword/basic_blade",
-                "basic_blade/aether_gravitite"
+                "basic_blade/aether_redux_veridium"
             ],
             "sword/hilt": [
                 "sword/basic_hilt",
@@ -153,15 +146,14 @@
             ],
             "sword/pommel": [
                 "sword/decorative_pommel",
-                "decorative_pommel/aether_gravitite"
+                "decorative_pommel/aether_redux_veridium"
             ],
             "sword/guard": [
                 "sword/makeshift_guard",
-                "makeshift_guard/aether_gravitite"
+                "makeshift_guard/aether_redux_veridium"
             ]
         },
         "improvements": {
-            "sword/blade:aetheric_tetranomicon/levitator": 0,
             "sword/blade:aetheric_tetranomicon/aetheric": 0
         }
     }

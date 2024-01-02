@@ -1,24 +1,24 @@
 {
-    "key": "deep_aether_roseroot",
+    "key": "aether_redux_blightwillow",
     "category": "wood",
-    "primary": 5.5,
-    "secondary": 2.3,
-    "tertiary": 6.2,
-    "durability": 768,
+    "primary": 5.6,
+    "secondary": 2.4,
+    "tertiary": 8.6,
+    "durability": 250,
     "integrityCost": 2,
-    "integrityGain": 6,
-    "magicCapacity": 144,
-    "toolLevel": "minecraft:stone",
-    "toolEfficiency": 4,
+    "integrityGain": 5,
+    "magicCapacity": 102,
+    "toolLevel": "minecraft:gold",
+    "toolEfficiency": 2,
     "improvements": {
         "aetheric_tetranomicon/aetheric": 0
     },
     "effects": {
-        "stabilizing": 15
+        "unstable": 10
     },
     "tints": {
-        "glyph": "efb2bb",
-        "texture": "efb2bb"
+        "glyph": "9fba90",
+        "texture": "9fba90"
     },
     "textures": [
         "crude",
@@ -26,7 +26,7 @@
     ],
     "material": {
         "items": [
-            "deep_aether:roseroot_planks"
+            "aether_redux:blightwillow_planks"
         ]
     },
     "requiredTools": {
@@ -35,7 +35,7 @@
     "conditions": [
         {
             "type": "forge:mod_loaded",
-            "modid": "deep_aether"
+            "modid": "aether_redux"
         }
     ]
 }

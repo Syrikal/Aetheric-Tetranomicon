@@ -9,11 +9,11 @@
     "integrityGain": 2,
     "magicCapacity": 84,
     "toolLevel": "minecraft:iron",
-    "toolEfficiency": 2,
+    "toolEfficiency": 6,
     "improvements": {
         "arrested": 0,
-        "aetheric_tetranomicon/tenacity": 0,
-        "aetheric_tetranomicon/aetheric": 0
+        "aetheric_tetranomicon/aetheric": 0,
+        "aetheric_tetranomicon/tenacity": 0
     },
     "tints": {
         "glyph": "763ace",

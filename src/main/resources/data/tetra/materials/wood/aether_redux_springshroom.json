@@ -1,14 +1,14 @@
 {
-    "key": "deep_aether_roseroot",
+    "key": "aether_redux_springshroom",
     "category": "wood",
-    "primary": 5.5,
-    "secondary": 2.3,
-    "tertiary": 6.2,
+    "primary": 4.2,
+    "secondary": 2.8,
+    "tertiary": 8,
     "durability": 768,
     "integrityCost": 2,
-    "integrityGain": 6,
-    "magicCapacity": 144,
-    "toolLevel": "minecraft:stone",
+    "integrityGain": 4,
+    "magicCapacity": 96,
+    "toolLevel": "minecraft:wood",
     "toolEfficiency": 4,
     "improvements": {
         "aetheric_tetranomicon/aetheric": 0
@@ -17,8 +17,8 @@
         "stabilizing": 15
     },
     "tints": {
-        "glyph": "efb2bb",
-        "texture": "efb2bb"
+        "glyph": "81868e",
+        "texture": "81868e"
     },
     "textures": [
         "crude",
@@ -26,7 +26,7 @@
     ],
     "material": {
         "items": [
-            "deep_aether:roseroot_planks"
+            "aether_redux:springshroom_planks"
         ]
     },
     "requiredTools": {
@@ -35,7 +35,7 @@
     "conditions": [
         {
             "type": "forge:mod_loaded",
-            "modid": "deep_aether"
+            "modid": "aether_redux"
         }
     ]
 }

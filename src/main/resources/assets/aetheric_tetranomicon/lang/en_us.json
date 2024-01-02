@@ -16,6 +16,28 @@
     "tetra.material.socket_aether_zanite.prefix": "§uZanite§r",
     
     
+    "tetra.material.aether_redux_blightwillow": "Blightwillow",
+    "tetra.material.aether_redux_blightwillow.prefix": "Blightwillow",
+    "tetra.material.aether_redux_cloudcap": "Cloudcap",
+    "tetra.material.aether_redux_cloudcap.prefix": "Cloudcap",
+    "tetra.material.aether_redux_crystal_wood": "Crystal Wood",
+    "tetra.material.aether_redux_crystal_wood.prefix": "Crystalline",
+    "tetra.material.aether_redux_fieldsprout": "Fieldsprout",
+    "tetra.material.aether_redux_fieldsprout.prefix": "Fieldsprout",
+    "tetra.material.aether_redux_gilded_vine": "Gilded Vine",
+    "tetra.material.aether_redux_gilded_vine.prefix": "Gilded vine",
+    "tetra.material.aether_redux_glacia": "Glacia",
+    "tetra.material.aether_redux_glacia.prefix": "Glacia",
+    "tetra.material.aether_redux_golden_vine": "Golden Vine",
+    "tetra.material.aether_redux_golden_vine.prefix": "Golden vine",
+    "tetra.material.aether_redux_springshroom": "Springshroom",
+    "tetra.material.aether_redux_springshroom.prefix": "Springshroom",
+    "tetra.material.aether_redux_veridium": "Veridium",
+    "tetra.material.aether_redux_veridium.prefix": "Veridium",
+    "tetra.material.aether_redux_vitrium": "Vitrium",
+    "tetra.material.aether_redux_vitrium.prefix": "Vitrium",
+    
+    
     "tetra.material.deep_aether_aseterite": "Aseterite",
     "tetra.material.deep_aether_aseterite.prefix": "Aseterite",
     "tetra.material.deep_aether_clorite": "Clorite",
@@ -40,9 +62,5 @@
     "tetra.material.deep_aether_yagroot_vines.prefix": "Yagroot Vine",
     
     "tetra.material.socket_deep_aether_skyjade": "Skyjade socket",
-    "tetra.material.socket_deep_aether_skyjade.prefix": "§qSkyjade§r",
-
-
-    "tetra.stats.ambrosia_seeker":"Ambrosia Seeker",
-    "tetra.stats.ambrosia_seeker.tooltip":"Test"
+    "tetra.material.socket_deep_aether_skyjade.prefix": "§qSkyjade§r"
 }

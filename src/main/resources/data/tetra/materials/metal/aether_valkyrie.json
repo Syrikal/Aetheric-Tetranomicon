@@ -3,16 +3,16 @@
     "category": "metal",
     "primary": 6,
     "secondary": 3,
-    "tertiary": 3,
+    "tertiary": 3.7,
     "durability": 1561,
     "integrityCost": 2,
-    "integrityGain": 4,
+    "integrityGain": 5,
     "magicCapacity": 60,
     "toolLevel": "minecraft:diamond",
     "toolEfficiency": 8,
     "improvements": {
-        "aetheric_tetranomicon/valkyrie": 0,
-        "aetheric_tetranomicon/aetheric": 0
+        "aetheric_tetranomicon/aetheric": 0,
+        "aetheric_tetranomicon/valkyrie": 0
     },
     "tints": {
         "glyph": "eeffff",
@@ -24,11 +24,11 @@
     ],
     "material": {
         "items": [
-            "aether:"
+            "aetheric_tetranomicon:valkyrian_scrap"
         ]
     },
     "requiredTools": {
-        "hammer_dig": "minecraft:diamond"
+        "hammer_dig": "minecraft:iron"
     },
     "conditions": [
         {

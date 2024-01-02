@@ -25,6 +25,12 @@
                 "double/basic_handle",
                 "basic_handle/aether_skyroot"
             ]
+        },
+        "improvements": {
+            "double/head_left:aetheric_tetranomicon/harvester": 0,
+            "double/head_right:aetheric_tetranomicon/harvester": 0,
+            "double/head_left:aetheric_tetranomicon/aetheric": 0,
+            "double/head_right:aetheric_tetranomicon/aetheric": 0
         }
     },
     {
@@ -53,6 +59,12 @@
                 "double/basic_handle",
                 "basic_handle/aether_skyroot"
             ]
+        },
+        "improvements": {
+            "double/head_left:aetheric_tetranomicon/harvester": 0,
+            "double/head_right:aetheric_tetranomicon/harvester": 0,
+            "double/head_left:aetheric_tetranomicon/aetheric": 0,
+            "double/head_right:aetheric_tetranomicon/aetheric": 0
         }
     },
     {
@@ -81,6 +93,12 @@
                 "double/basic_handle",
                 "basic_handle/aether_skyroot"
             ]
+        },
+        "improvements": {
+            "double/head_left:aetheric_tetranomicon/harvester": 0,
+            "double/head_right:aetheric_tetranomicon/harvester": 0,
+            "double/head_left:aetheric_tetranomicon/aetheric": 0,
+            "double/head_right:aetheric_tetranomicon/aetheric": 0
         }
     },
     {
@@ -105,6 +123,10 @@
                 "single/basic_handle",
                 "basic_handle/aether_skyroot"
             ]
+        },
+        "improvements": {
+            "single/head:aetheric_tetranomicon/harvester": 0,
+            "single/head:aetheric_tetranomicon/aetheric": 0
         }
     },
     {
@@ -137,6 +159,10 @@
                 "sword/makeshift_guard",
                 "makeshift_guard/aether_skyroot"
             ]
+        },
+        "improvements": {
+            "sword/blade:aetheric_tetranomicon/harvester": 0,
+            "sword/blade:aetheric_tetranomicon/aetheric": 0
         }
     }
 ]

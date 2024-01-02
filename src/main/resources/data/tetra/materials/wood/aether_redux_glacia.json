@@ -1,22 +1,22 @@
 {
-    "key": "aether_skyroot",
+    "key": "aether_redux_glacia",
     "category": "wood",
     "primary": 3,
-    "secondary": 1.4,
-    "tertiary": 6,
-    "durability": 59,
+    "secondary": 1.7,
+    "tertiary": 5.4,
+    "durability": 1024,
     "integrityCost": 1,
     "integrityGain": 4,
-    "magicCapacity": 90,
+    "magicCapacity": 120,
     "toolLevel": "minecraft:wood",
-    "toolEfficiency": 2,
+    "toolEfficiency": 6,
     "improvements": {
         "aetheric_tetranomicon/aetheric": 0,
         "aetheric_tetranomicon/harvester": 0
     },
     "tints": {
-        "glyph": "968159",
-        "texture": "968159"
+        "glyph": "9e9a89",
+        "texture": "9e9a89"
     },
     "textures": [
         "crude",
@@ -24,16 +24,16 @@
     ],
     "material": {
         "items": [
-            "aether:skyroot_planks"
+            "aether_redux:glacia_planks"
         ]
     },
     "requiredTools": {
-        "axe_dig": "minecraft:wood"
+        "axe_dig": "minecraft:iron"
     },
     "conditions": [
         {
             "type": "forge:mod_loaded",
-            "modid": "aether"
+            "modid": "aether_redux"
         }
     ]
 }

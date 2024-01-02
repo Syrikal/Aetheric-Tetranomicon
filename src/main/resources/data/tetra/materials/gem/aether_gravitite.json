@@ -11,8 +11,8 @@
     "toolLevel": "minecraft:diamond",
     "toolEfficiency": 8,
     "improvements": {
-        "aetheric_tetranomicon/levitator": 0,
-        "aetheric_tetranomicon/aetheric": 0
+        "aetheric_tetranomicon/aetheric": 0,
+        "aetheric_tetranomicon/levitator": 0
     },
     "tints": {
         "glyph": "912188",

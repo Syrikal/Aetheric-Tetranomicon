@@ -1,0 +1,40 @@
+{
+    "key": "aether_redux_crystal_wood",
+    "category": "wood",
+    "primary": 5,
+    "secondary": 2.8,
+    "tertiary": 2.2,
+    "durability": 768,
+    "integrityCost": 2,
+    "integrityGain": 2,
+    "magicCapacity": 90,
+    "toolLevel": "minecraft:stone",
+    "toolEfficiency": 12,
+    "improvements": {
+        "arrested": 0,
+        "aetheric_tetranomicon/aetheric": 0,
+        "aetheric_tetranomicon/ambrosia_seeker": 0
+    },
+    "tints": {
+        "glyph": "8da6c1",
+        "texture": "8da6c1"
+    },
+    "textures": [
+        "crude",
+        "wooden"
+    ],
+    "material": {
+        "items": [
+            "aether_redux:crystal_planks"
+        ]
+    },
+    "requiredTools": {
+        "axe_dig": "minecraft:iron"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "aether_redux"
+        }
+    ]
+}
