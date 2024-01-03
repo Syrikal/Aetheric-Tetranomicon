@@ -14,6 +14,21 @@
     "tetra.material.socket_aether_golden_amber.prefix": "§6Golden Amber§r",
     "tetra.material.socket_aether_zanite": "Zanite socket",
     "tetra.material.socket_aether_zanite.prefix": "§uZanite§r",
+
+    "tetra.improvement.aetheric_tetranomicon/aetheric.name": "Aetheric",
+    "tetra.improvement.aetheric_tetranomicon/aetheric.description": "Effective in the Aether",
+    "tetra.improvement.aetheric_tetranomicon/ambrosia_seeker.name": "Ambrosium Seeker",
+    "tetra.improvement.aetheric_tetranomicon/ambrosia_seeker.description":  "Occasionally drops ambrosium while mining",
+    "tetra.improvement.aetheric_tetranomicon/harvester.name": "Harvester",
+    "tetra.improvement.aetheric_tetranomicon/harvester.description": "Doubles drops from some Aether blocks",
+    "tetra.improvement.aetheric_tetranomicon/levitator.name": "Levitator",
+    "tetra.improvement.aetheric_tetranomicon/levitator.description": "Capable of launching blocks and creatures",
+    "tetra.improvement.aetheric_tetranomicon/tenacity.name": "Tenacity",
+    "tetra.improvement.aetheric_tetranomicon/tenacity.description":  "Effectiveness increases at low durability",
+    "tetra.improvement.aetheric_tetranomicon/valkyrie.name": "Valkyrian",
+    "tetra.improvement.aetheric_tetranomicon/valkyrie.description": "Increases reach by 3.5 blocks",
+
+    "tetra.variant.double_binding/valkyrian": "Valkyrian binding",
     
     
     "tetra.material.aether_redux_blightwillow": "Blightwillow",
@@ -62,5 +77,7 @@
     "tetra.material.deep_aether_yagroot_vines.prefix": "Yagroot Vine",
     
     "tetra.material.socket_deep_aether_skyjade": "Skyjade socket",
-    "tetra.material.socket_deep_aether_skyjade.prefix": "§qSkyjade§r"
+    "tetra.material.socket_deep_aether_skyjade.prefix": "§qSkyjade§r",
+
+    "item.aetheric_tetranomicon.valkyrian_scrap": "Valkyrian Scrap"
 }

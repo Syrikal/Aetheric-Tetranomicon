@@ -1,0 +1,11 @@
+{
+    "type": "aether:enchanting",
+    "cookingtime": 1500,
+    "ingredient": {
+        "item": "aether:valkyrie_hoe"
+    },
+    "result": {
+        "item": "aetheric_tetranomicon:valkyrian_scrap",
+        "count": 3
+    }
+}
