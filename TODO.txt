@@ -1,7 +1,7 @@
 DONE: Add valkyrian scrap model
 TODO: Add valkyrian scrap texture
 DONE: Add valkyrian scrap recipes
-TODO: Add valkyrian scrap to Creative inventory
+DONE: Add valkyrian scrap to Creative inventory
 
 DONE: Add improvement names in the lang file
 
