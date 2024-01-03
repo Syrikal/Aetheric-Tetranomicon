@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "outcomes":[
+    {
+      "material": {
+        "items": [
+          "aetheric_tetranomicon:valkyrian_scrap"
+        ]
+      },
+      "requiredTools": {
+        "hammer_dig": "minecraft:iron"
+      },
+      "moduleKey": "single/binding",
+      "moduleVariant": "single_binding/valkyrian"
+    }
+  ]
+}

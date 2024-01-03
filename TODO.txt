@@ -5,9 +5,12 @@ DONE: Add valkyrian scrap to Creative inventory
 
 DONE: Add improvement names in the lang file
 
-TODO: Make Levitator throw enemies into the air
-TODO: Make Aetheric prevent damage debuff
-TODO: Make Tenacity affect damage
+DONE?: Make Levitator throw enemies into the air
+DONE: Make Aetheric prevent damage debuff
+DONE: Make Ambrosia Seeker drop ambrosium
+DONE: Make Tenacity affect damage
+TODO: Make Levitator, Ambrosia Seeker, and Tenacity only do weapon stuff for weapons
+TODO: Make projectiles inherit effects
 TODO: Add Valkyrie effect
 DONE: Add Valkyrian Binding module
 TODO: Make improvements apply only to specific modules

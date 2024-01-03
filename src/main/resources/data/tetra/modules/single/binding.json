@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "variants": [
+    {
+      "key": "single_binding/valkyrian",
+      "durability": 150,
+      "integrity": 4,
+      "attributes": {
+        "generic.attack_speed": -0.1,
+        "forge:reach_distance": 1,
+        "forge:attack_range": 1
+      },
+      "effects": {
+        "aetheric_tetranomicon:aetheric": 1
+      },
+      "glyph": {
+        "tint": "eeffff",
+        "textureX": 80,
+        "textureY": 16
+      },
+      "models": [
+        {
+          "location": "tetra:item/module/single/binding/binding/default",
+          "tint": "eeffff"
+        }
+      ]
+    }
+  ]
+}

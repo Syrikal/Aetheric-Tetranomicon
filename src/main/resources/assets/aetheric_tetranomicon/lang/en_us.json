@@ -29,6 +29,8 @@
     "tetra.improvement.aetheric_tetranomicon/valkyrie.description": "Increases reach by 3.5 blocks",
 
     "tetra.variant.double_binding/valkyrian": "Valkyrian binding",
+    "tetra.variant.single_binding/valkyrian": "Valkyrian binding",
+    "tetra.variant.sword_binding/valkyrian": "Valkyrian binding",
     
     
     "tetra.material.aether_redux_blightwillow": "Blightwillow",
