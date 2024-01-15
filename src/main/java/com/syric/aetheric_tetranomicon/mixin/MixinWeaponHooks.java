@@ -31,7 +31,7 @@ public class MixinWeaponHooks {
                 if (stack.getItem() instanceof ModularItem modularItem) {
 //                    AethericTetranomicon.LOGGER.info("WeaponHooks mixin detected modular tool");
                     aetheric = modularItem.getEffectLevel(stack, AethericEffect.aetheric) > 0;
-//                    AethericTetranomicon.LOGGER.info("AbilityHooks mixin detected Aetheric level " + modularItem.getEffectLevel(stack, AethericEffect.aetheric));
+//                    AethericTetranomicon.LOGGER.info("WeaponHooks mixin detected Aetheric level " + modularItem.getEffectLevel(stack, AethericEffect.aetheric));
                 }
             }
         }
@@ -39,12 +39,12 @@ public class MixinWeaponHooks {
         //Check for ranged weapon
         else if (source instanceof Projectile projectile) {
             aetheric = projectile.getTags().contains("aetheric");
-            AethericTetranomicon.LOGGER.info("AbilityHooks mixin detected Aetheric projectile");
+            AethericTetranomicon.LOGGER.info("WeaponHooks mixin detected Aetheric projectile");
         }
 
         //If aetheric, return damage immediately
         if (aetheric) {
-            AethericTetranomicon.LOGGER.info("AbilityHooks mixin detected modular Aetheric weapon, not altering damage of " + damage);
+//            AethericTetranomicon.LOGGER.info("WeaponHooks mixin detected modular Aetheric weapon, not altering damage of " + damage);
             cir.setReturnValue(damage);
             cir.cancel();
         }

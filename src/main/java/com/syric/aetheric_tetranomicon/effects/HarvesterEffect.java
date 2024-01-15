@@ -1,7 +1,7 @@
 package com.syric.aetheric_tetranomicon.effects;
 
 import com.aetherteam.aether.block.AetherBlockStateProperties;
-import com.syric.aetheric_tetranomicon.AethericTetranomicon;
+import com.syric.aetheric_tetranomicon.util.ModularUtil;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.state.BlockState;
@@ -18,6 +18,7 @@ public class HarvesterEffect {
 
         if (tool != null && state != null) {
 //            AethericTetranomicon.LOGGER.info("Harvester detected that tool and state are not null.");
+            boolean isTool = ModularUtil.isModularTool(tool);
             boolean noSilkTouch = tool.getEnchantmentLevel(Enchantments.SILK_TOUCH) == 0;
             boolean isDoubleDropBlock = state.getValue(AetherBlockStateProperties.DOUBLE_DROPS);
             boolean isCorrectTool = tool.isCorrectToolForDrops(state);
@@ -30,7 +31,7 @@ public class HarvesterEffect {
 
 //            AethericTetranomicon.LOGGER.info(String.format("Harvester says... noSilkTouch: %s, isDoubleDropBlock: %s, isCorrectTool: %s, hasHarvesterEffect: %s", noSilkTouch, isDoubleDropBlock, isCorrectTool, hasHarvesterEffect));
 
-            if (noSilkTouch && isDoubleDropBlock && isCorrectTool && hasHarvesterEffect) {
+            if (isTool && noSilkTouch && isDoubleDropBlock && isCorrectTool && hasHarvesterEffect) {
                 drop.setCount(2 * drop.getCount());
             }
         }

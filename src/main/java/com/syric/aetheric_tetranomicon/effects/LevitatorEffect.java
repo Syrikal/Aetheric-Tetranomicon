@@ -4,6 +4,7 @@ import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.block.miscellaneous.FloatingBlock;
 import com.aetherteam.aether.entity.block.FloatingBlockEntity;
 import com.syric.aetheric_tetranomicon.AethericTetranomicon;
+import com.syric.aetheric_tetranomicon.util.ModularUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
 import net.minecraft.server.level.ServerPlayer;
@@ -45,6 +46,7 @@ public class LevitatorEffect {
                 BlockState blockState = level.getBlockState(blockPos);
                 InteractionHand hand = event.getHand();
 
+                boolean isTool = ModularUtil.isModularTool(heldStack);
                 boolean playerNotSneaking = !player.isShiftKeyDown();
                 boolean correctTool = heldStack.isCorrectToolForDrops(blockState);
                 boolean blockIsFree = FloatingBlock.isFree(level.getBlockState(blockPos.above()));
@@ -55,7 +57,7 @@ public class LevitatorEffect {
 
                 AethericTetranomicon.LOGGER.info(String.format("Not sneaking: %s, correct tool: %s, block free: %s, not a block entity: %s, breakable: %s, not double block half: %s, not blacklisted: %s", playerNotSneaking, correctTool, blockIsFree, notBlockEntity, breakable, notDoubleBlockHalf, notBlacklisted));
 
-                if (playerNotSneaking && correctTool && blockIsFree && notBlockEntity && breakable && notDoubleBlockHalf && notBlacklisted) {
+                if (isTool && playerNotSneaking && correctTool && blockIsFree && notBlockEntity && breakable && notDoubleBlockHalf && notBlacklisted) {
                     if (!level.isClientSide()) {
                         FloatingBlockEntity entity = new FloatingBlockEntity(level, (double) blockPos.getX() + 0.5, (double) blockPos.getY(), (double) blockPos.getZ() + 0.5, blockState);
                         entity.setNatural(false);
@@ -96,16 +98,21 @@ public class LevitatorEffect {
             if (heldStack.getItem() instanceof ModularItem item) {
                 int level = item.getEffectLevel(heldStack, levitator);
 
+                boolean isWeapon = ModularUtil.isModularMeleeWeapon(heldStack);
                 boolean levitator = level > 0;
                 boolean notCanceled = !event.isCanceled();
                 boolean fullStrengthAttack = player.getAttackStrengthScale(1.0F) == 1.0F;
                 boolean validEntity = !target.getType().is(AetherTags.Entities.UNLAUNCHABLE);
                 boolean onGround = target.onGround() || target.isInFluidType();
 
-                if (levitator && notCanceled && fullStrengthAttack && validEntity && onGround) {
+                if (isWeapon && levitator && notCanceled && fullStrengthAttack && validEntity && onGround) {
                     AethericTetranomicon.LOGGER.info("detected modular gravitite weapon, triggering ability");
-                    target.push(0.0, 1.0, 0.0);
-                    player.push(0.0, 1.0, 0.0);
+                    AethericTetranomicon.LOGGER.info("Target's delta movement before push is " + target.getDeltaMovement());
+                    target.setDeltaMovement(0.0, 2.0, 0.0);
+                    AethericTetranomicon.LOGGER.info("Target's delta movement after push is " + target.getDeltaMovement());
+                    target.hurtMarked = true;
+                    target.setSecondsOnFire(1);
+
                     if (target instanceof ServerPlayer serverPlayer) {
                         serverPlayer.connection.send(new ClientboundSetEntityMotionPacket(serverPlayer));
                     }

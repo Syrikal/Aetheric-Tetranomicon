@@ -2,8 +2,8 @@ package com.syric.aetheric_tetranomicon.effects;
 
 import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.item.AetherItems;
-import com.aetherteam.aether.item.EquipmentUtil;
 import com.syric.aetheric_tetranomicon.AethericTetranomicon;
+import com.syric.aetheric_tetranomicon.util.ModularUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
@@ -36,9 +36,15 @@ public class AmbrosiaSeekerEffect {
         if (heldStack.getItem() instanceof ModularItem item) {
             int effectlevel = item.getEffectLevel(heldStack, ambrosia_seeker);
 
+            boolean isTool = ModularUtil.isModularTool(heldStack);
+            boolean serverSide = !level.isClientSide();
+            boolean breaking = blockState.getDestroySpeed(level, blockPos) > 0.0F;
+            boolean correctTool = heldStack.isCorrectToolForDrops(blockState);
+            boolean randomActivation = player.getRandom().nextInt(50) == 0;
+
             if (!event.isCanceled() && effectlevel > 0) {
                 AethericTetranomicon.LOGGER.info("detected modular holystone tool, triggering ability");
-                if (!level.isClientSide() && blockState.getDestroySpeed(level, blockPos) > 0.0F && heldStack.isCorrectToolForDrops(blockState) && player.getRandom().nextInt(50) == 0) {
+                if (isTool && serverSide && breaking && correctTool && randomActivation) {
                     ItemEntity itemEntity = new ItemEntity(level, (double)blockPos.getX() + 0.5, (double)blockPos.getY() + 0.5, (double)blockPos.getZ() + 0.5, new ItemStack(AetherItems.AMBROSIUM_SHARD.get()));
                     level.addFreshEntity(itemEntity);
                 }
@@ -61,6 +67,7 @@ public class AmbrosiaSeekerEffect {
             if (heldStack.getItem() instanceof ModularItem item) {
                 int level = item.getEffectLevel(heldStack, ambrosia_seeker);
 
+                boolean isWeapon = ModularUtil.isModularMeleeWeapon(heldStack);
                 boolean ambrosia_seeker = level > 0;
                 boolean notCanceled = !event.isCanceled();
                 boolean fullStrengthAttack = player.getAttackStrengthScale(1.0F) == 1.0F;
@@ -68,7 +75,7 @@ public class AmbrosiaSeekerEffect {
                 boolean randomTrigger = target.level().getRandom().nextInt(25) == 0;
 
 
-                if (ambrosia_seeker && notCanceled && fullStrengthAttack && validEntity && randomTrigger) {
+                if (isWeapon && ambrosia_seeker && notCanceled && fullStrengthAttack && validEntity && randomTrigger) {
                     AethericTetranomicon.LOGGER.info("detected modular holystone weapon, triggering ability");
                     target.spawnAtLocation(AetherItems.AMBROSIUM_SHARD.get());
                 }
