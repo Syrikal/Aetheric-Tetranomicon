@@ -3,7 +3,6 @@ package com.syric.aetheric_tetranomicon.effects;
 import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.block.miscellaneous.FloatingBlock;
 import com.aetherteam.aether.entity.block.FloatingBlockEntity;
-import com.syric.aetheric_tetranomicon.AethericTetranomicon;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
 import net.minecraft.server.level.ServerPlayer;
@@ -17,7 +16,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraftforge.event.entity.living.LivingDamageEvent;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import se.mickelus.tetra.effect.ItemEffect;
@@ -39,7 +38,7 @@ public class LevitatorEffect {
             int effectLevel = item.getEffectLevel(heldStack, levitator);
 
             if (effectLevel > 0) {
-                AethericTetranomicon.LOGGER.info("detected modular gravitite tool, triggering ability");
+//                AethericTetranomicon.LOGGER.info("detected modular gravitite tool, triggering ability");
                 Level level = event.getLevel();
                 BlockPos blockPos = event.getPos();
                 BlockState blockState = level.getBlockState(blockPos);
@@ -53,7 +52,7 @@ public class LevitatorEffect {
                 boolean notDoubleBlockHalf = !blockState.hasProperty(BlockStateProperties.DOUBLE_BLOCK_HALF);
                 boolean notBlacklisted = !blockState.is(AetherTags.Blocks.GRAVITITE_ABILITY_BLACKLIST);
 
-                AethericTetranomicon.LOGGER.info(String.format("Not sneaking: %s, correct tool: %s, block free: %s, not a block entity: %s, breakable: %s, not double block half: %s, not blacklisted: %s", playerNotSneaking, correctTool, blockIsFree, notBlockEntity, breakable, notDoubleBlockHalf, notBlacklisted));
+//                AethericTetranomicon.LOGGER.info(String.format("Not sneaking: %s, correct tool: %s, block free: %s, not a block entity: %s, breakable: %s, not double block half: %s, not blacklisted: %s", playerNotSneaking, correctTool, blockIsFree, notBlockEntity, breakable, notDoubleBlockHalf, notBlacklisted));
 
                 if (playerNotSneaking && correctTool && blockIsFree && notBlockEntity && breakable && notDoubleBlockHalf && notBlacklisted) {
                     if (!level.isClientSide()) {
@@ -85,7 +84,7 @@ public class LevitatorEffect {
      * Gravitite weapons can be used to throw enemies into the air.
      */
     @SubscribeEvent
-    public void attackEvent(LivingDamageEvent event) {
+    public void attackEvent(LivingAttackEvent event) {
         LivingEntity target = event.getEntity();
         DamageSource damageSource = event.getSource();
         Entity sourceEntity = damageSource.getDirectEntity();
@@ -102,10 +101,19 @@ public class LevitatorEffect {
                 boolean validEntity = !target.getType().is(AetherTags.Entities.UNLAUNCHABLE);
                 boolean onGround = target.onGround() || target.isInFluidType();
 
+//                AethericTetranomicon.LOGGER.info(String.format(
+//                        "Levitator: %s, Not Canceled: %s, Full Strength Attack: %s, Valid Entity: %s, On Ground: %s",
+//                        levitator, notCanceled, fullStrengthAttack, validEntity, onGround));
+
                 if (levitator && notCanceled && fullStrengthAttack && validEntity && onGround) {
-                    AethericTetranomicon.LOGGER.info("detected modular gravitite weapon, triggering ability");
+//                    AethericTetranomicon.LOGGER.info("detected modular gravitite weapon, triggering ability");
+//                    AethericTetranomicon.LOGGER.info("Target's delta movement before push is " + target.getDeltaMovement());
                     target.push(0.0, 1.0, 0.0);
-                    player.push(0.0, 1.0, 0.0);
+//                    AethericTetranomicon.LOGGER.info("Target's delta movement after push is " + target.getDeltaMovement());
+                    target.hurtMarked = true;
+                    target.setOnGround(false);
+//                    target.setSecondsOnFire(1);
+
                     if (target instanceof ServerPlayer serverPlayer) {
                         serverPlayer.connection.send(new ClientboundSetEntityMotionPacket(serverPlayer));
                     }
