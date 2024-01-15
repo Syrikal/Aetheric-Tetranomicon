@@ -3,17 +3,31 @@ TODO: Add valkyrian scrap texture
 DONE: Add valkyrian scrap recipes
 DONE: Add valkyrian scrap to Creative inventory
 
+TODO: Add phoenix scrap model
+TODO: Add phoenix scrap texture
+TODO: Add phoenix scrap recipes
+TODO: Add phoenix scrap to Creative inventory
+TODO: Add phoenix material
+
 DONE: Add improvement names in the lang file
 
-DONE?: Make Levitator throw enemies into the air
+DONE: Make Levitator levitate blocks
+DONE: Make Levitator throw enemies into the air
+DONE: Make Aetheric prevent mining debuff
 DONE: Make Aetheric prevent damage debuff
-DONE: Make Ambrosia Seeker drop ambrosium
+DONE: Make Ambrosia Seeker drop ambrosium on mining
+DONE: Make Ambrosia Seeker drop ambrosium on attacks
+DONE: Make Tenacity affect mining speed
 DONE: Make Tenacity affect damage
+DONE: Make Harvester double drops
+TODO: Make Valkyrie increase reach
+
 TODO: Make Levitator, Ambrosia Seeker, and Tenacity only do weapon stuff for weapons
 TODO: Make projectiles inherit effects
-TODO: Add Valkyrie effect
+
 DONE: Add Valkyrian Binding module
 TODO: Make improvements apply only to specific modules
+
 TODO: Add Ambrosium Infusion improvement
 TODO: Make Ambrosium Infusion only apply to veridium modules
 TODO: Make Ambrosium Infusion consumable
