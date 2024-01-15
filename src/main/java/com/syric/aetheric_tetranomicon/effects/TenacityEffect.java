@@ -1,7 +1,7 @@
 package com.syric.aetheric_tetranomicon.effects;
 
 import com.aetherteam.aether.item.EquipmentUtil;
-import com.syric.aetheric_tetranomicon.util.ModularUtil;
+import com.syric.aetheric_tetranomicon.AethericTetranomicon;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -25,7 +25,7 @@ public class TenacityEffect {
         ItemStack heldStack = player.getMainHandItem();
         if (heldStack.getItem() instanceof ModularItem item) {
             int level = item.getEffectLevel(heldStack, tenacity);
-            if (level > 0 && !event.isCanceled() && ModularUtil.isModularTool(heldStack)) {
+            if (level > 0 && !event.isCanceled()) {
 //                AethericTetranomicon.LOGGER.info("detected modular zanite tool, triggering ability");
 //                AethericTetranomicon.LOGGER.info("tool durability: " + heldStack.getDamageValue() + " out of " + heldStack.getMaxDamage());
                 event.setNewSpeed((float) EquipmentUtil.calculateZaniteBuff(heldStack, event.getNewSpeed()));
@@ -47,7 +47,7 @@ public class TenacityEffect {
 
             if (heldStack.getItem() instanceof ModularItem item) {
                 int level = item.getEffectLevel(heldStack, tenacity);
-                if (level > 0 && !event.isCanceled() && ModularUtil.isModularMeleeWeapon(heldStack)) {
+                if (level > 0 && !event.isCanceled()) {
 //                    AethericTetranomicon.LOGGER.info("detected modular zanite weapon, triggering ability");
 //                    AethericTetranomicon.LOGGER.info("zanite weapon initial damage: " + event.getAmount());
 //                    AethericTetranomicon.LOGGER.info("weapon durability: " + heldStack.getDamageValue() + " out of " + heldStack.getMaxDamage());
