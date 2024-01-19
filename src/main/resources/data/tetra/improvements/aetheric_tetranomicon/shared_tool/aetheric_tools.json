@@ -28,5 +28,11 @@
     "effects": {
       "aetheric_tetranomicon:aetheric": 1
     }
+  },
+  {
+    "key": "aetheric_tetranomicon/phoenix",
+    "effects": {
+      "aetheric_tetranomicon:phoenix": 1
+    }
   }
 ]

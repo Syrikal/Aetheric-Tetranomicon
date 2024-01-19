@@ -89,5 +89,14 @@
     "tetra.material.socket_deep_aether_skyjade": "Skyjade socket",
     "tetra.material.socket_deep_aether_skyjade.prefix": "§qSkyjade§r",
 
-    "item.aetheric_tetranomicon.valkyrian_scrap": "Valkyrian Scrap"
+
+    "tetra.material.lost_aether_content_phoenix": "Phoenix",
+    "tetra.material.lost_aether_content_phoenix.prefix": "Phoenix",
+
+    "tetra.improvement.aetheric_tetranomicon/phoenix.name": "Phoenix",
+    "tetra.improvement.aetheric_tetranomicon/phoenix.description": "Auto-smelting and increased damage against burning targets",
+
+
+    "item.aetheric_tetranomicon.valkyrian_scrap": "Valkyrian Scrap",
+    "item.aetheric_tetranomicon.phoenix_scrap": "Phoenix Scrap"
 }

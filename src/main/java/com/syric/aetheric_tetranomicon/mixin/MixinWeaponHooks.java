@@ -22,7 +22,7 @@ public class MixinWeaponHooks {
     private static void injected(LivingEntity target, Entity source, float damage, CallbackInfoReturnable<Float> cir) {
 
         boolean aetheric = false;
-        AethericTetranomicon.LOGGER.info("WeaponHooks mixin checking weapon effectiveness. initial damage: " + damage);
+//        AethericTetranomicon.LOGGER.info("WeaponHooks mixin checking weapon effectiveness. initial damage: " + damage);
 
         //Check for melee weapon
         if (source instanceof LivingEntity livingEntity) {

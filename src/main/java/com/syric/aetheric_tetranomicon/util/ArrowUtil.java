@@ -19,6 +19,7 @@ public class ArrowUtil {
                 boolean harvester = modularItem.getEffectLevel(bowStack, HarvesterEffect.harvester) > 0;
                 boolean levitator = modularItem.getEffectLevel(bowStack, LevitatorEffect.levitator_weapon) > 0;
                 boolean tenacity = modularItem.getEffectLevel(bowStack, TenacityEffect.tenacity_weapon) > 0;
+                boolean phoenix = modularItem.getEffectLevel(bowStack, PhoenixEffect.phoenix) > 0;
 
 
                 if (aetheric) {
@@ -35,6 +36,9 @@ public class ArrowUtil {
                 }
                 if (tenacity) {
                     arrow.addTag("tenacity");
+                }
+                if (phoenix) {
+                    arrow.addTag("phoenix");
                 }
             }
         }
