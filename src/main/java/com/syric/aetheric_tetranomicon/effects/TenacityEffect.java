@@ -1,7 +1,6 @@
 package com.syric.aetheric_tetranomicon.effects;
 
 import com.aetherteam.aether.item.EquipmentUtil;
-import com.syric.aetheric_tetranomicon.AethericTetranomicon;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -13,7 +12,8 @@ import se.mickelus.tetra.effect.ItemEffect;
 import se.mickelus.tetra.items.modular.ModularItem;
 
 public class TenacityEffect {
-    public static final ItemEffect tenacity = ItemEffect.get("aetheric_tetranomicon:tenacity");
+    public static final ItemEffect tenacity_tool = ItemEffect.get("aetheric_tetranomicon:tenacity_tool");
+    public static final ItemEffect tenacity_weapon = ItemEffect.get("aetheric_tetranomicon:tenacity_weapon");
 
     /**
      * @param event
@@ -24,7 +24,7 @@ public class TenacityEffect {
         Player player = event.getEntity();
         ItemStack heldStack = player.getMainHandItem();
         if (heldStack.getItem() instanceof ModularItem item) {
-            int level = item.getEffectLevel(heldStack, tenacity);
+            int level = item.getEffectLevel(heldStack, tenacity_tool);
             if (level > 0 && !event.isCanceled()) {
 //                AethericTetranomicon.LOGGER.info("detected modular zanite tool, triggering ability");
 //                AethericTetranomicon.LOGGER.info("tool durability: " + heldStack.getDamageValue() + " out of " + heldStack.getMaxDamage());
@@ -46,7 +46,7 @@ public class TenacityEffect {
             ItemStack heldStack = player.getMainHandItem();
 
             if (heldStack.getItem() instanceof ModularItem item) {
-                int level = item.getEffectLevel(heldStack, tenacity);
+                int level = item.getEffectLevel(heldStack, tenacity_weapon);
                 if (level > 0 && !event.isCanceled()) {
 //                    AethericTetranomicon.LOGGER.info("detected modular zanite weapon, triggering ability");
 //                    AethericTetranomicon.LOGGER.info("zanite weapon initial damage: " + event.getAmount());

@@ -2,7 +2,6 @@ package com.syric.aetheric_tetranomicon.effects;
 
 import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.item.AetherItems;
-import com.aetherteam.aether.item.EquipmentUtil;
 import com.syric.aetheric_tetranomicon.AethericTetranomicon;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.damagesource.DamageSource;
@@ -20,7 +19,8 @@ import se.mickelus.tetra.effect.ItemEffect;
 import se.mickelus.tetra.items.modular.ModularItem;
 
 public class AmbrosiaSeekerEffect {
-    public static final ItemEffect ambrosia_seeker = ItemEffect.get("aetheric_tetranomicon:ambrosia_seeker");
+    public static final ItemEffect ambrosia_seeker_tool = ItemEffect.get("aetheric_tetranomicon:ambrosia_seeker_tool");
+    public static final ItemEffect ambrosia_seeker_weapon = ItemEffect.get("aetheric_tetranomicon:ambrosia_seeker_weapon");
 
     /**
      * Holystone tools can drop ambrosia when used.
@@ -34,7 +34,7 @@ public class AmbrosiaSeekerEffect {
         BlockState blockState = event.getState();
 
         if (heldStack.getItem() instanceof ModularItem item) {
-            int effectlevel = item.getEffectLevel(heldStack, ambrosia_seeker);
+            int effectlevel = item.getEffectLevel(heldStack, ambrosia_seeker_tool);
 
             if (!event.isCanceled() && effectlevel > 0) {
                 AethericTetranomicon.LOGGER.info("detected modular holystone tool, triggering ability");
@@ -59,7 +59,7 @@ public class AmbrosiaSeekerEffect {
             ItemStack heldStack = player.getMainHandItem();
 
             if (heldStack.getItem() instanceof ModularItem item) {
-                int level = item.getEffectLevel(heldStack, ambrosia_seeker);
+                int level = item.getEffectLevel(heldStack, ambrosia_seeker_weapon);
 
                 boolean ambrosia_seeker = level > 0;
                 boolean notCanceled = !event.isCanceled();

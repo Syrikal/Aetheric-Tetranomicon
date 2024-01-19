@@ -13,7 +13,8 @@
     "improvements": {
         "arrested": 0,
         "aetheric_tetranomicon/aetheric": 0,
-        "aetheric_tetranomicon/ambrosia_seeker": 0
+        "aetheric_tetranomicon/ambrosia_seeker_tool": 0,
+        "aetheric_tetranomicon/ambrosia_seeker_weapon": 0
     },
     "tints": {
         "glyph": "8da6c1",

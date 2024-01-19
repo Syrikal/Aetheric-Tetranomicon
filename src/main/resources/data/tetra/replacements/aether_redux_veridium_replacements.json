@@ -8,14 +8,14 @@
         ],
         "predicate": {
             "items": [
-                "aether_redux:veridium_hoe"
+                "aether_redux:veridium_axe"
             ]
         },
         "item": "tetra:modular_double",
         "modules": {
             "double/head_left": [
-                "double/hoe_left",
-                "hoe/aether_redux_veridium"
+                "double/basic_axe_left",
+                "basic_axe/aether_redux_veridium"
             ],
             "double/head_right": [
                 "double/butt_right",
@@ -27,8 +27,7 @@
             ]
         },
         "improvements": {
-            "double/head_left:aetheric_tetranomicon/aetheric": 0,
-            "double/head_right:aetheric_tetranomicon/aetheric": 0
+            "double/head_left:aetheric_tetranomicon/aetheric": 0
         }
     },
     {
@@ -59,8 +58,7 @@
             ]
         },
         "improvements": {
-            "double/head_left:aetheric_tetranomicon/aetheric": 0,
-            "double/head_right:aetheric_tetranomicon/aetheric": 0
+            "double/head_left:aetheric_tetranomicon/aetheric": 0
         }
     },
     {

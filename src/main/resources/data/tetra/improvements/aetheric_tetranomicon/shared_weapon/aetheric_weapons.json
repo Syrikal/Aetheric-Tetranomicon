@@ -1,0 +1,26 @@
+[
+  {
+    "key": "aetheric_tetranomicon/ambrosia_seeker_weapon",
+    "effects": {
+      "aetheric_tetranomicon:ambrosia_seeker_weapon": 1
+    }
+  },
+  {
+    "key": "aetheric_tetranomicon/levitator_weapon",
+    "effects": {
+      "aetheric_tetranomicon:levitator_weapon": 1
+    }
+  },
+  {
+    "key": "aetheric_tetranomicon/tenacity_weapon",
+    "effects": {
+      "aetheric_tetranomicon:tenacity_weapon": 1
+    }
+  },
+  {
+    "key": "aetheric_tetranomicon/aetheric",
+    "effects": {
+      "aetheric_tetranomicon:aetheric": 1
+    }
+  }
+]

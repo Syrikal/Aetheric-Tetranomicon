@@ -23,7 +23,8 @@ import se.mickelus.tetra.effect.ItemEffect;
 import se.mickelus.tetra.items.modular.ModularItem;
 
 public class LevitatorEffect {
-    public static final ItemEffect levitator = ItemEffect.get("aetheric_tetranomicon:levitator");
+    public static final ItemEffect levitator_tool = ItemEffect.get("aetheric_tetranomicon:levitator_tool");
+    public static final ItemEffect levitator_weapon = ItemEffect.get("aetheric_tetranomicon:levitator_weapon");
 
     /**
      * @param event
@@ -35,7 +36,7 @@ public class LevitatorEffect {
         ItemStack heldStack = player.getMainHandItem();
 
         if (heldStack.getItem() instanceof ModularItem item) {
-            int effectLevel = item.getEffectLevel(heldStack, levitator);
+            int effectLevel = item.getEffectLevel(heldStack, levitator_tool);
 
             if (effectLevel > 0) {
 //                AethericTetranomicon.LOGGER.info("detected modular gravitite tool, triggering ability");
@@ -93,7 +94,7 @@ public class LevitatorEffect {
             ItemStack heldStack = player.getMainHandItem();
 
             if (heldStack.getItem() instanceof ModularItem item) {
-                int level = item.getEffectLevel(heldStack, levitator);
+                int level = item.getEffectLevel(heldStack, levitator_weapon);
 
                 boolean levitator = level > 0;
                 boolean notCanceled = !event.isCanceled();

@@ -22,11 +22,11 @@ DONE: Make Tenacity affect damage
 DONE: Make Harvester double drops
 DONE: Make Valkyrie increase reach
 
-TODO: Make Levitator, Ambrosia Seeker, and Tenacity only do weapon stuff for weapons
+DONE: Make Levitator, Ambrosia Seeker, and Tenacity only do weapon stuff for weapons
 TODO: Make projectiles inherit effects
 
 DONE: Add Valkyrian Binding module
-TODO: Make improvements apply only to specific modules
+DONE: Make improvements apply only to specific modules
 
 TODO: Add Ambrosium Infusion improvement
 TODO: Make Ambrosium Infusion only apply to veridium modules

@@ -28,9 +28,7 @@
         },
         "improvements": {
             "double/head_left:aetheric_tetranomicon/harvester": 0,
-            "double/head_right:aetheric_tetranomicon/harvester": 0,
-            "double/head_left:aetheric_tetranomicon/aetheric": 0,
-            "double/head_right:aetheric_tetranomicon/aetheric": 0
+            "double/head_left:aetheric_tetranomicon/aetheric": 0
         }
     },
     {
@@ -62,9 +60,7 @@
         },
         "improvements": {
             "double/head_left:aetheric_tetranomicon/harvester": 0,
-            "double/head_right:aetheric_tetranomicon/harvester": 0,
-            "double/head_left:aetheric_tetranomicon/aetheric": 0,
-            "double/head_right:aetheric_tetranomicon/aetheric": 0
+            "double/head_left:aetheric_tetranomicon/aetheric": 0
         }
     },
     {

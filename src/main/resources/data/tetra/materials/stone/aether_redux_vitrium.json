@@ -12,7 +12,8 @@
     "toolEfficiency": 4,
     "improvements": {
         "aetheric_tetranomicon/aetheric": 0,
-        "aetheric_tetranomicon/ambrosia_seeker": 0
+        "aetheric_tetranomicon/ambrosia_seeker_tool": 0,
+        "aetheric_tetranomicon/ambrosia_seeker_weapon": 0
     },
     "effects": {
         "crushing": 2

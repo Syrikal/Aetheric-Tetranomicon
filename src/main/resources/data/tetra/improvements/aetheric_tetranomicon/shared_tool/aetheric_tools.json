@@ -1,0 +1,32 @@
+[
+  {
+    "key": "aetheric_tetranomicon/ambrosia_seeker_tool",
+    "effects": {
+      "aetheric_tetranomicon:ambrosia_seeker_tool": 1
+    }
+  },
+  {
+    "key": "aetheric_tetranomicon/harvester",
+    "effects": {
+      "aetheric_tetranomicon:harvester": 1
+    }
+  },
+  {
+    "key": "aetheric_tetranomicon/levitator_tool",
+    "effects": {
+      "aetheric_tetranomicon:levitator_tool": 1
+    }
+  },
+  {
+    "key": "aetheric_tetranomicon/tenacity_tool",
+    "effects": {
+      "aetheric_tetranomicon:tenacity_tool": 1
+    }
+  },
+  {
+    "key": "aetheric_tetranomicon/aetheric",
+    "effects": {
+      "aetheric_tetranomicon:aetheric": 1
+    }
+  }
+]

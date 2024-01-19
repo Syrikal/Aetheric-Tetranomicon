@@ -13,7 +13,8 @@
     "improvements": {
         "arrested": 0,
         "aetheric_tetranomicon/aetheric": 0,
-        "aetheric_tetranomicon/tenacity": 0
+        "aetheric_tetranomicon/tenacity_tool": 0,
+        "aetheric_tetranomicon/tenacity_weapon": 0
     },
     "tints": {
         "glyph": "763ace",

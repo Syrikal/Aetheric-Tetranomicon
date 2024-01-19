@@ -15,10 +15,10 @@ public class ArrowUtil {
         if (bowStack.getItem() instanceof ModularItem modularItem) {
             if (modularItem instanceof ModularBowItem || modularItem instanceof ModularCrossbowItem) {
                 boolean aetheric = modularItem.getEffectLevel(bowStack, AethericEffect.aetheric) > 0;
-                boolean ambrosia_seeker = modularItem.getEffectLevel(bowStack, AmbrosiaSeekerEffect.ambrosia_seeker) > 0;
+                boolean ambrosia_seeker = modularItem.getEffectLevel(bowStack, AmbrosiaSeekerEffect.ambrosia_seeker_weapon) > 0;
                 boolean harvester = modularItem.getEffectLevel(bowStack, HarvesterEffect.harvester) > 0;
-                boolean levitator = modularItem.getEffectLevel(bowStack, LevitatorEffect.levitator) > 0;
-                boolean tenacity = modularItem.getEffectLevel(bowStack, TenacityEffect.tenacity) > 0;
+                boolean levitator = modularItem.getEffectLevel(bowStack, LevitatorEffect.levitator_weapon) > 0;
+                boolean tenacity = modularItem.getEffectLevel(bowStack, TenacityEffect.tenacity_weapon) > 0;
 
 
                 if (aetheric) {

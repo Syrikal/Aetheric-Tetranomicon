@@ -12,7 +12,8 @@
     "toolEfficiency": 9,
     "improvements": {
         "aetheric_tetranomicon/aetheric": 0,
-        "aetheric_tetranomicon/levitator": 0
+        "aetheric_tetranomicon/levitator_tool": 0,
+        "aetheric_tetranomicon/levitator_weapon": 0
     },
     "tints": {
         "glyph": "834f99",
