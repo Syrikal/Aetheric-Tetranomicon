@@ -27,8 +27,8 @@
             ]
         },
         "improvements": {
-            "double/head_left:aetheric_tetranomicon/valkyrie": 0,
-            "double/head_right:aetheric_tetranomicon/valkyrie": 0,
+            "double/head_left:aetheric_tetranomicon/valkyrie_half": 0,
+            "double/head_right:aetheric_tetranomicon/valkyrie_half": 0,
             "double/head_left:aetheric_tetranomicon/aetheric": 0,
             "double/head_right:aetheric_tetranomicon/aetheric": 0
         }
@@ -61,8 +61,8 @@
             ]
         },
         "improvements": {
-            "double/head_left:aetheric_tetranomicon/valkyrie": 0,
-            "double/head_right:aetheric_tetranomicon/valkyrie": 0,
+            "double/head_left:aetheric_tetranomicon/valkyrie_half": 0,
+            "double/head_right:aetheric_tetranomicon/valkyrie_half": 0,
             "double/head_left:aetheric_tetranomicon/aetheric": 0,
             "double/head_right:aetheric_tetranomicon/aetheric": 0
         }
@@ -95,8 +95,8 @@
             ]
         },
         "improvements": {
-            "double/head_left:aetheric_tetranomicon/valkyrie": 0,
-            "double/head_right:aetheric_tetranomicon/valkyrie": 0,
+            "double/head_left:aetheric_tetranomicon/valkyrie_half": 0,
+            "double/head_right:aetheric_tetranomicon/valkyrie_half": 0,
             "double/head_left:aetheric_tetranomicon/aetheric": 0,
             "double/head_right:aetheric_tetranomicon/aetheric": 0
         }
@@ -125,7 +125,7 @@
             ]
         },
         "improvements": {
-            "single/head:aetheric_tetranomicon/valkyrie": 0,
+            "single/head:aetheric_tetranomicon/valkyrie_whole": 0,
             "single/head:aetheric_tetranomicon/aetheric": 0
         }
     },
@@ -161,7 +161,7 @@
             ]
         },
         "improvements": {
-            "sword/blade:aetheric_tetranomicon/valkyrie": 0,
+            "sword/blade:aetheric_tetranomicon/valkyrie_whole": 0,
             "sword/blade:aetheric_tetranomicon/aetheric": 0
         }
     }

@@ -1,8 +1,8 @@
 package com.syric.aetheric_tetranomicon.mixin;
 
 import com.aetherteam.aether.event.hooks.AbilityHooks;
-import com.syric.aetheric_tetranomicon.AethericTetranomicon;
 import com.syric.aetheric_tetranomicon.effects.AethericEffect;
+import com.syric.aetheric_tetranomicon.effects.ValkyrieEffect;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
@@ -27,6 +27,24 @@ public class MixinToolHooks {
                 cir.cancel();
                 cir.setReturnValue(speed);
             }
+        }
+    }
+
+    @Inject(method="hasValkyrieItemInMainHandOnly", at = @At("HEAD"), cancellable = true, remap = false)
+    private static void injected(Player player, CallbackInfoReturnable<Boolean> cir) {
+        ItemStack mainHandStack = player.getMainHandItem();
+        ItemStack offHandStack = player.getOffhandItem();
+        boolean mainHandValkyrian = false;
+        boolean offHandValkyrian = false;
+        if (mainHandStack.getItem() instanceof ModularItem mainModularItem) {
+            mainHandValkyrian = mainModularItem.getEffectLevel(mainHandStack, ValkyrieEffect.valkyrie) > 0;
+        }
+        if (offHandStack.getItem() instanceof ModularItem offModularItem) {
+            offHandValkyrian = offModularItem.getEffectLevel(mainHandStack, ValkyrieEffect.valkyrie) > 0;
+        }
+        if (mainHandValkyrian && !offHandValkyrian) {
+            cir.cancel();
+            cir.setReturnValue(true);
         }
     }
 

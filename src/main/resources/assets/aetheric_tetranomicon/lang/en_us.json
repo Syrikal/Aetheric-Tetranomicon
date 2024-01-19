@@ -25,8 +25,10 @@
     "tetra.improvement.aetheric_tetranomicon/levitator.description": "Capable of launching blocks and creatures",
     "tetra.improvement.aetheric_tetranomicon/tenacity.name": "Tenacity",
     "tetra.improvement.aetheric_tetranomicon/tenacity.description":  "Effectiveness increases at low durability",
-    "tetra.improvement.aetheric_tetranomicon/valkyrie.name": "Valkyrian",
-    "tetra.improvement.aetheric_tetranomicon/valkyrie.description": "Increases reach by 3.5 blocks",
+    "tetra.improvement.aetheric_tetranomicon/valkyrie_whole.name": "Valkyrian",
+    "tetra.improvement.aetheric_tetranomicon/valkyrie_whole.description": "Increases reach by 3.5 blocks",
+    "tetra.improvement.aetheric_tetranomicon/valkyrie_half.name": "Valkyrian",
+    "tetra.improvement.aetheric_tetranomicon/valkyrie_half.description": "Increases reach by 1.75 blocks",
 
     "tetra.variant.double_binding/valkyrian": "Valkyrian binding",
     "tetra.variant.single_binding/valkyrian": "Valkyrian binding",

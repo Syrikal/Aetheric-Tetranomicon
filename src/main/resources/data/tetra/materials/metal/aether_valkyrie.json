@@ -12,7 +12,8 @@
     "toolEfficiency": 8,
     "improvements": {
         "aetheric_tetranomicon/aetheric": 0,
-        "aetheric_tetranomicon/valkyrie": 0
+        "aetheric_tetranomicon/valkyrie_half": 0,
+        "aetheric_tetranomicon/valkyrie_whole": 0
     },
     "tints": {
         "glyph": "eeffff",

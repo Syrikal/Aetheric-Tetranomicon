@@ -28,11 +28,5 @@
     "effects": {
       "aetheric_tetranomicon:tenacity": 1
     }
-  },
-  {
-    "key": "aetheric_tetranomicon/valkyrie",
-    "effects": {
-      "aetheric_tetranomicon:valkyrie": 1
-    }
   }
 ]

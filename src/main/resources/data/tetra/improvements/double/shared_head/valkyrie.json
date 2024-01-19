@@ -1,0 +1,12 @@
+[
+  {
+    "key": "aetheric_tetranomicon/valkyrie_half",
+    "effects": {
+      "aetheric_tetranomicon:valkyrie": 1
+    },
+    "attributes": {
+      "forge:reach_distance": 1.75,
+      "forge:attack_range": 1.75
+    }
+  }
+]

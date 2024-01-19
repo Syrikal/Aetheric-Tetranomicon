@@ -20,7 +20,7 @@ DONE: Make Ambrosia Seeker drop ambrosium on attacks
 DONE: Make Tenacity affect mining speed
 DONE: Make Tenacity affect damage
 DONE: Make Harvester double drops
-TODO: Make Valkyrie increase reach
+DONE: Make Valkyrie increase reach
 
 TODO: Make Levitator, Ambrosia Seeker, and Tenacity only do weapon stuff for weapons
 TODO: Make projectiles inherit effects
