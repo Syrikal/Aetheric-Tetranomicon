@@ -12,10 +12,14 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.HitResult;
+import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -124,4 +128,43 @@ public class LevitatorEffect {
 
     }
 
+    /**
+     * @param event Levitator arrows throw targets into the air.
+     */
+    @SubscribeEvent
+    public void onArrowHit(ProjectileImpactEvent event) {
+//        AethericTetranomicon.LOGGER.info("ProjectileImpactEvent detected");
+
+        HitResult hitResult = event.getRayTraceResult();
+        Projectile projectile = event.getProjectile();
+
+        if (hitResult instanceof EntityHitResult entityHitResult) {
+            Entity target = entityHitResult.getEntity();
+
+            int drawProgress = 0;
+            for (String tag : projectile.getTags()) {
+                if (tag.startsWith("drawProgress")) {
+                    drawProgress = Integer.parseInt(tag.split("_")[1]);
+                }
+            }
+
+            boolean levitator = projectile.getTags().contains("levitator");
+            boolean notCanceled = !event.isCanceled();
+            boolean critArrow = drawProgress >= 20;
+            boolean validEntity = !target.getType().is(AetherTags.Entities.UNLAUNCHABLE);
+            boolean onGround = target.onGround();
+
+//        AethericTetranomicon.LOGGER.info(String.format("Arrow hit detected! Not canceled: %s, Levitator: %s", notCanceled, levitator));
+
+            if (levitator && notCanceled && critArrow && validEntity && onGround) {
+//            AethericTetranomicon.LOGGER.info(String.format("Levitator arrow hit a %s", target.getType()));
+                target.push(0.0, 1.0, 0.0);
+                target.hurtMarked = true;
+                target.setOnGround(false);
+                if (target instanceof ServerPlayer serverPlayer) {
+                    serverPlayer.connection.send(new ClientboundSetEntityMotionPacket(serverPlayer));
+                }
+            }
+        }
+    }
 }

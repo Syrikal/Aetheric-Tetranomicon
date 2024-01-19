@@ -6,8 +6,10 @@ import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
@@ -15,6 +17,9 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.HitResult;
+import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -93,7 +98,7 @@ public class PhoenixEffect {
                 boolean burningTarget = target.isOnFire();
 
                 if (phoenix && burningTarget) {
-                    float storedAmount = event.getAmount();
+//                    float storedAmount = event.getAmount();
                     event.setAmount(event.getAmount() * 1.2F);
 //                    AethericTetranomicon.LOGGER.info(String.format("Phoenix effect changed damage from %s to %s", storedAmount, event.getAmount()));
                 }
@@ -101,5 +106,44 @@ public class PhoenixEffect {
         }
     }
 
+
+    /**
+     * @param event Phoenix arrows set targets on fire.
+     */
+    @SubscribeEvent
+    public void onArrowHit(ProjectileImpactEvent event) {
+//        AethericTetranomicon.LOGGER.info("ProjectileImpactEvent detected");
+
+        HitResult hitResult = event.getRayTraceResult();
+        Projectile projectile = event.getProjectile();
+
+        if (hitResult instanceof EntityHitResult entityHitResult) {
+            Entity target = entityHitResult.getEntity();
+
+            int time = 0;
+
+            for (String tag : projectile.getTags()) {
+                if (tag.startsWith("phoenixTime")) {
+                    time = Integer.parseInt(tag.split("_")[1]);
+                    break;
+                }
+            }
+
+            if (target.getType() == EntityType.ENDERMAN) {
+                return;
+            }
+
+            boolean phoenix = projectile.getTags().contains("phoenix");
+            boolean notCanceled = !event.isCanceled();
+            boolean notZeroTime = time != 0;
+
+//        AethericTetranomicon.LOGGER.info(String.format("Arrow hit detected! Not canceled: %s, Phoenix: %s", notCanceled, phoenix));
+
+            if (phoenix && notCanceled && notZeroTime) {
+//            AethericTetranomicon.LOGGER.info(String.format("Phoenix arrow hit a %s", target.getType()));
+                target.setSecondsOnFire(time);
+            }
+        }
+    }
 
 }

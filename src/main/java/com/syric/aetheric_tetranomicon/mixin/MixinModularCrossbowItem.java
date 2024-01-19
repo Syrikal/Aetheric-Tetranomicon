@@ -21,8 +21,8 @@ public class MixinModularCrossbowItem {
             target = "Lnet/minecraft/world/entity/projectile/AbstractArrow;setCritArrow(Z)V",
             shift = At.Shift.AFTER),
             locals = LocalCapture.CAPTURE_FAILSOFT)
-    private void applyTags(Level world, ItemStack crossbowStack, ItemStack ammoStack, Player player, double yaw, boolean isDupe, CallbackInfo ci, boolean isDupe2, double strength, float velocityBonus, float projectileVelocity, ArrowItem ammoItem, AbstractArrow projectile) {
-        ArrowUtil.addTags(crossbowStack, projectile, player);
+    private void applyTags(Level world, ItemStack crossbowStack, ItemStack ammoStack, Player player, double yaw, boolean isDupe, CallbackInfo ci, double strength, float velocityBonus, float projectileVelocity, ArrowItem ammoItem, AbstractArrow projectile) {
+        ArrowUtil.addTags(crossbowStack, projectile, player, 20);
     }
 
 }

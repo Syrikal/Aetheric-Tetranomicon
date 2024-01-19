@@ -1,7 +1,6 @@
 package com.syric.aetheric_tetranomicon.mixin;
 
 import com.aetherteam.aether.event.hooks.AbilityHooks;
-import com.syric.aetheric_tetranomicon.AethericTetranomicon;
 import com.syric.aetheric_tetranomicon.effects.AethericEffect;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -39,12 +38,12 @@ public class MixinWeaponHooks {
         //Check for ranged weapon
         else if (source instanceof Projectile projectile) {
             aetheric = projectile.getTags().contains("aetheric");
-            AethericTetranomicon.LOGGER.info("AbilityHooks mixin detected Aetheric projectile");
+//            AethericTetranomicon.LOGGER.info("AbilityHooks mixin detected Aetheric projectile");
         }
 
         //If aetheric, return damage immediately
         if (aetheric) {
-            AethericTetranomicon.LOGGER.info("AbilityHooks mixin detected modular Aetheric weapon, not altering damage of " + damage);
+//            AethericTetranomicon.LOGGER.info("AbilityHooks mixin detected modular Aetheric weapon, not altering damage of " + damage);
             cir.setReturnValue(damage);
             cir.cancel();
         }

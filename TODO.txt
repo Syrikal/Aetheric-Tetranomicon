@@ -26,7 +26,7 @@ DONE: Make Phoenix weapons deal more damage to burning enemies
 DONE: Make Phoenix tools auto-smelt
 
 DONE: Make Levitator, Ambrosia Seeker, and Tenacity only do weapon stuff for weapons
-TODO: Make projectiles inherit effects
+DONE: Make projectiles inherit effects
 
 DONE: Add Valkyrian Binding module
 DONE: Make improvements apply only to specific modules
@@ -38,3 +38,5 @@ TODO: Make Ambrosium Infusion consumable
 TODO: Get permission from:
 TODO: Aether devs
 TODO: Lost Aether Content devs
+
+TODO: Port to 1.19

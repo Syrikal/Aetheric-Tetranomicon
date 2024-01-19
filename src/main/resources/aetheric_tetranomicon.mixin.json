@@ -6,7 +6,9 @@
   "mixins": [
     "MixinDoubleDrops",
     "MixinToolHooks",
-    "MixinWeaponHooks"
+    "MixinWeaponHooks",
+    "MixinModularBowItem",
+    "MixinModularCrossbowItem"
   ],
   "injectors": {
     "defaultRequire": 1

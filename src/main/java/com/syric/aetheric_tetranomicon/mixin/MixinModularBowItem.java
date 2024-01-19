@@ -23,7 +23,7 @@ public class MixinModularBowItem {
             shift = At.Shift.AFTER),
             locals = LocalCapture.CAPTURE_FAILSOFT)
     private void applyTags(ItemStack itemStack, Level world, LivingEntity entity, int timeLeft, CallbackInfo ci, Player player, ItemStack ammoStack, boolean playerInfinite, int drawProgress, double strength, float velocityBonus, int suspendLevel, float projectileVelocity, ArrowItem ammoItem, boolean infiniteAmmo, int count, double multishotSpread, float accuracy, int powerLevel, int punchLevel, int flameLevel, int piercingLevel, int i, double yaw, AbstractArrow projectile) {
-        ArrowUtil.addTags(itemStack, projectile, player);
+        ArrowUtil.addTags(itemStack, projectile, player, drawProgress);
     }
 
 }

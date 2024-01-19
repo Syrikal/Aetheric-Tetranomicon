@@ -2,13 +2,13 @@ package com.syric.aetheric_tetranomicon.effects;
 
 import com.aetherteam.aether.AetherTags;
 import com.aetherteam.aether.item.AetherItems;
-import com.syric.aetheric_tetranomicon.AethericTetranomicon;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -37,7 +37,7 @@ public class AmbrosiaSeekerEffect {
             int effectlevel = item.getEffectLevel(heldStack, ambrosia_seeker_tool);
 
             if (!event.isCanceled() && effectlevel > 0) {
-                AethericTetranomicon.LOGGER.info("detected modular holystone tool, triggering ability");
+//                AethericTetranomicon.LOGGER.info("detected modular holystone tool, triggering ability");
                 if (!level.isClientSide() && blockState.getDestroySpeed(level, blockPos) > 0.0F && heldStack.isCorrectToolForDrops(blockState) && player.getRandom().nextInt(50) == 0) {
                     ItemEntity itemEntity = new ItemEntity(level, (double)blockPos.getX() + 0.5, (double)blockPos.getY() + 0.5, (double)blockPos.getZ() + 0.5, new ItemStack(AetherItems.AMBROSIUM_SHARD.get()));
                     level.addFreshEntity(itemEntity);
@@ -69,11 +69,41 @@ public class AmbrosiaSeekerEffect {
 
 
                 if (ambrosia_seeker && notCanceled && fullStrengthAttack && validEntity && randomTrigger) {
-                    AethericTetranomicon.LOGGER.info("detected modular holystone weapon, triggering ability");
+//                    AethericTetranomicon.LOGGER.info("detected modular holystone weapon, triggering ability");
                     target.spawnAtLocation(AetherItems.AMBROSIUM_SHARD.get());
                 }
             }
         }
     }
+
+    /**
+     * Ambrosia seeker arrows can drop ambrosia when they hit.
+     */
+    @SubscribeEvent
+    public void onArrowHit(LivingDamageEvent event) {
+        LivingEntity target = event.getEntity();
+        Entity sourceEntity = event.getSource().getDirectEntity();
+
+        if (sourceEntity instanceof Projectile projectile) {
+
+            int drawProgress = 0;
+            for (String tag : projectile.getTags()) {
+                if (tag.startsWith("drawProgress")) {
+                    drawProgress = Integer.parseInt(tag.split("_")[1]);
+                }
+            }
+
+            boolean ambrosia_seeker = projectile.getTags().contains("ambrosia_seeker");
+            boolean notCanceled = !event.isCanceled();
+            boolean critArrow = drawProgress >= 20;
+            boolean validEntity = !target.getType().is(AetherTags.Entities.NO_AMBROSIUM_DROPS);
+            boolean randomTrigger = target.level().getRandom().nextInt(25) == 0;
+
+            if (ambrosia_seeker && notCanceled && critArrow && validEntity && randomTrigger) {
+                target.spawnAtLocation(AetherItems.AMBROSIUM_SHARD.get());
+            }
+        }
+    }
+
 
 }
