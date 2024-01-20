@@ -4,6 +4,7 @@
   "package": "com.syric.aetheric_tetranomicon.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "MixinAbstractArrow",
     "MixinDoubleDrops",
     "MixinModularBowItem",
     "MixinModularCrossbowItem",

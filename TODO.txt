@@ -24,6 +24,10 @@ DONE: Make Harvester double drops
 DONE: Make Valkyrie increase reach
 DONE: Make Phoenix weapons deal more damage to burning enemies
 DONE: Make Phoenix tools auto-smelt
+DONE: Check all effects on server
+DONE: Fix Skyroot color
+DONE: Give phoenix arrows fire particles
+DONE: Gravitite and zanite tools mine golden amber
 
 DONE: Make Levitator, Ambrosia Seeker, and Tenacity only do weapon stuff for weapons
 DONE: Make projectiles inherit effects
@@ -38,5 +42,6 @@ DONE: Make Ambrosium Infusion consumable
 TODO: Get permission from:
 TODO: Aether devs
 TODO: Lost Aether Content devs
+TODO: Aether Redux devs
 
 TODO: Port to 1.19

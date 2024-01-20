@@ -1,13 +1,21 @@
 package com.syric.aetheric_tetranomicon.effects;
 
+import com.aetherteam.aether.block.AetherBlocks;
+import com.aetherteam.aether.item.AetherItems;
 import com.aetherteam.aether.item.EquipmentUtil;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import se.mickelus.tetra.effect.ItemEffect;
 import se.mickelus.tetra.items.modular.ModularItem;
@@ -103,6 +111,33 @@ public class TenacityEffect {
 //                AethericTetranomicon.LOGGER.info(String.format("Tenacious arrow hit a %s. Initial damage: %s, final damage: %s", event.getEntity().getType(), eventdamage, finalAmount));
 
                 event.setAmount(finalAmount);
+            }
+        }
+    }
+
+    /**
+     * @param event Zanite tools drop golden amber from golden oak logs.
+     */
+    @SubscribeEvent
+    public void breakEvent(BlockEvent.BreakEvent event) {
+        Player player = event.getPlayer();
+        Level level = player.level();
+        BlockPos blockPos = event.getPos();
+        ItemStack heldStack = player.getMainHandItem();
+        BlockState blockState = event.getState();
+
+        if (heldStack.getItem() instanceof ModularItem item) {
+            int effectlevel = item.getEffectLevel(heldStack, tenacity_tool);
+
+            boolean notCanceled = !event.isCanceled();
+            boolean zanite = effectlevel > 0;
+            boolean goldenOak = blockState.is(AetherBlocks.GOLDEN_OAK_LOG.get()) || blockState.is(AetherBlocks.GOLDEN_OAK_WOOD.get());
+            boolean noSilkTouch = !EnchantmentHelper.hasSilkTouch(heldStack);
+
+            if (zanite && notCanceled && goldenOak && noSilkTouch) {
+                boolean two = level.getRandom().nextBoolean();
+                ItemEntity itemEntity = new ItemEntity(level, (double) blockPos.getX() + 0.5, (double) blockPos.getY() + 0.5, (double) blockPos.getZ() + 0.5, new ItemStack(AetherItems.GOLDEN_AMBER.get(), two ? 2 : 1));
+                level.addFreshEntity(itemEntity);
             }
         }
     }

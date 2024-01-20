@@ -1,8 +1,10 @@
 package com.syric.aetheric_tetranomicon.effects;
 
 import com.aetherteam.aether.AetherTags;
+import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.aether.block.miscellaneous.FloatingBlock;
 import com.aetherteam.aether.entity.block.FloatingBlockEntity;
+import com.aetherteam.aether.item.AetherItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
 import net.minecraft.server.level.ServerPlayer;
@@ -11,9 +13,11 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -22,6 +26,7 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import se.mickelus.tetra.effect.ItemEffect;
 import se.mickelus.tetra.items.modular.ModularItem;
@@ -167,4 +172,33 @@ public class LevitatorEffect {
             }
         }
     }
+
+
+    /**
+     * @param event Gravitite tools drop golden amber from golden oak logs.
+     */
+    @SubscribeEvent
+    public void breakEvent(BlockEvent.BreakEvent event) {
+        Player player = event.getPlayer();
+        Level level = player.level();
+        BlockPos blockPos = event.getPos();
+        ItemStack heldStack = player.getMainHandItem();
+        BlockState blockState = event.getState();
+
+        if (heldStack.getItem() instanceof ModularItem item) {
+            int effectlevel = item.getEffectLevel(heldStack, levitator_tool);
+
+            boolean notCanceled = !event.isCanceled();
+            boolean levitator = effectlevel > 0;
+            boolean goldenOak = blockState.is(AetherBlocks.GOLDEN_OAK_LOG.get()) || blockState.is(AetherBlocks.GOLDEN_OAK_WOOD.get());
+            boolean noSilkTouch = !EnchantmentHelper.hasSilkTouch(heldStack);
+
+            if (levitator && notCanceled && goldenOak && noSilkTouch) {
+                boolean two = level.getRandom().nextBoolean();
+                ItemEntity itemEntity = new ItemEntity(level, (double) blockPos.getX() + 0.5, (double) blockPos.getY() + 0.5, (double) blockPos.getZ() + 0.5, new ItemStack(AetherItems.GOLDEN_AMBER.get(), two ? 2 : 1));
+                level.addFreshEntity(itemEntity);
+            }
+        }
+    }
+
 }
