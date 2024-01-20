@@ -28,5 +28,11 @@
     "effects": {
       "aetheric_tetranomicon:phoenix": 1
     }
+  },
+  {
+    "key": "aetheric_tetranomicon/veridium_infusable",
+    "effects": {
+      "aetheric_tetranomicon:veridium_infusable": 1
+    }
   }
 ]

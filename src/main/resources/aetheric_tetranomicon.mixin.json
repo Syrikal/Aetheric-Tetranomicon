@@ -5,10 +5,11 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "MixinDoubleDrops",
-    "MixinToolHooks",
-    "MixinWeaponHooks",
     "MixinModularBowItem",
-    "MixinModularCrossbowItem"
+    "MixinModularCrossbowItem",
+    "MixinModularItem",
+    "MixinToolHooks",
+    "MixinWeaponHooks"
   ],
   "injectors": {
     "defaultRequire": 1

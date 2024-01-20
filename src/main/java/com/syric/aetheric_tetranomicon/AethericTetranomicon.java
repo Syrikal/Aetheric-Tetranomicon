@@ -31,6 +31,7 @@ public class AethericTetranomicon {
         MinecraftForge.EVENT_BUS.register(new PhoenixEffect());
         MinecraftForge.EVENT_BUS.register(new TenacityEffect());
         MinecraftForge.EVENT_BUS.register(new ValkyrieEffect());
+        MinecraftForge.EVENT_BUS.register(new VeridiumInfusionEffect());
 
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();

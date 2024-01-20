@@ -11,7 +11,8 @@
     "toolLevel": "minecraft:iron",
     "toolEfficiency": 2.25,
     "improvements": {
-        "aetheric_tetranomicon/aetheric": 0
+        "aetheric_tetranomicon/aetheric": 0,
+        "aetheric_tetranomicon/veridium_infusable": 0
     },
     "tints": {
         "glyph": "5885cd",

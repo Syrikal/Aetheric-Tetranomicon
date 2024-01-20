@@ -31,9 +31,9 @@ DONE: Make projectiles inherit effects
 DONE: Add Valkyrian Binding module
 DONE: Make improvements apply only to specific modules
 
-TODO: Add Ambrosium Infusion improvement
-TODO: Make Ambrosium Infusion only apply to veridium modules
-TODO: Make Ambrosium Infusion consumable
+DONE: Add Ambrosium Infusion improvement
+DONE: Make Ambrosium Infusion only apply to veridium modules
+DONE: Make Ambrosium Infusion consumable
 
 TODO: Get permission from:
 TODO: Aether devs
