@@ -7,7 +7,7 @@
     "durability": 1024,
     "integrityCost": 2,
     "integrityGain": 6,
-    "magicCapacity": 90,
+    "magicCapacity": 84,
     "toolLevel": "minecraft:wood",
     "toolEfficiency": 3,
     "improvements": {

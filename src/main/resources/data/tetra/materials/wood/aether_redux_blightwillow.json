@@ -1,9 +1,9 @@
 {
     "key": "aether_redux_blightwillow",
     "category": "wood",
-    "primary": 5.6,
+    "primary": 5.5,
     "secondary": 2.4,
-    "tertiary": 8.6,
+    "tertiary": 8.7,
     "durability": 250,
     "integrityCost": 2,
     "integrityGain": 5,

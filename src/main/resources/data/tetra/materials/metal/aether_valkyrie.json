@@ -2,7 +2,7 @@
     "key": "aether_valkyrie",
     "category": "metal",
     "primary": 6,
-    "secondary": 3,
+    "secondary": 2.8,
     "tertiary": 3.7,
     "durability": 1561,
     "integrityCost": 2,
@@ -12,14 +12,15 @@
     "toolEfficiency": 8,
     "improvements": {
         "aetheric_tetranomicon/aetheric": 0,
-        "aetheric_tetranomicon/valkyrie_half": 0,
-        "aetheric_tetranomicon/valkyrie_whole": 0
+        "aetheric_tetranomicon/valkyrie_whole": 0,
+        "aetheric_tetranomicon/valkyrie_half": 0
     },
     "tints": {
         "glyph": "eeffff",
         "texture": "eeffff"
     },
     "textures": [
+        "shiny",
         "metal",
         "default"
     ],

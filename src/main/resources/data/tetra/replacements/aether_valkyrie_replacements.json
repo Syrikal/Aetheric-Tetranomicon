@@ -75,6 +75,42 @@
         ],
         "predicate": {
             "items": [
+                "aether:valkyrie_lance"
+            ]
+        },
+        "item": "tetra:modular_sword",
+        "modules": {
+            "sword/blade": [
+                "sword/basic_blade",
+                "basic_blade/aether_valkyrie"
+            ],
+            "sword/hilt": [
+                "sword/basic_hilt",
+                "basic_hilt/aether_skyroot"
+            ],
+            "sword/pommel": [
+                "sword/decorative_pommel",
+                "decorative_pommel/aether_valkyrie"
+            ],
+            "sword/guard": [
+                "sword/makeshift_guard",
+                "makeshift_guard/aether_valkyrie"
+            ]
+        },
+        "improvements": {
+            "sword/blade:aetheric_tetranomicon/valkyrie_whole": 0,
+            "sword/blade:aetheric_tetranomicon/aetheric": 0
+        }
+    },
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "aether"
+            }
+        ],
+        "predicate": {
+            "items": [
                 "aether:valkyrie_pickaxe"
             ]
         },
@@ -126,42 +162,6 @@
         "improvements": {
             "single/head:aetheric_tetranomicon/valkyrie_whole": 0,
             "single/head:aetheric_tetranomicon/aetheric": 0
-        }
-    },
-    {
-        "conditions": [
-            {
-                "type": "forge:mod_loaded",
-                "modid": "aether"
-            }
-        ],
-        "predicate": {
-            "items": [
-                "aether:valkyrie_lance"
-            ]
-        },
-        "item": "tetra:modular_sword",
-        "modules": {
-            "sword/blade": [
-                "sword/basic_blade",
-                "basic_blade/aether_valkyrie"
-            ],
-            "sword/hilt": [
-                "sword/basic_hilt",
-                "basic_hilt/aether_skyroot"
-            ],
-            "sword/pommel": [
-                "sword/decorative_pommel",
-                "decorative_pommel/aether_valkyrie"
-            ],
-            "sword/guard": [
-                "sword/makeshift_guard",
-                "makeshift_guard/aether_valkyrie"
-            ]
-        },
-        "improvements": {
-            "sword/blade:aetheric_tetranomicon/valkyrie_whole": 0,
-            "sword/blade:aetheric_tetranomicon/aetheric": 0
         }
     }
 ]

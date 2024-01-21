@@ -12,7 +12,8 @@
     "toolLevel": 0,
     "toolEfficiency": 0,
     "effects": {
-        "earthbind": 8
+        "earthbind": 8,
+        "intuit": 1
     },
     "tints": {
         "glyph": "ffd84d",

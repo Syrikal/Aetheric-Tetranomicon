@@ -4,10 +4,10 @@
     "primary": 5.5,
     "secondary": 2.6,
     "tertiary": 5,
-    "durability": 1024,
+    "durability": 768,
     "integrityCost": 2,
     "integrityGain": 7,
-    "magicCapacity": 108,
+    "magicCapacity": 102,
     "toolLevel": "minecraft:stone",
     "toolEfficiency": 4,
     "improvements": {
