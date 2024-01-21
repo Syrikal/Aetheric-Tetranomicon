@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "aetheric_tetranomicon:phoenix_scrap"
+    "layer0": "aetheric_tetranomicon:item/phoenix_scrap"
   }
 }

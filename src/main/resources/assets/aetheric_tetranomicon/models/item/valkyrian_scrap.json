@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "aetheric_tetranomicon:valkyrian_scrap"
+    "layer0": "aetheric_tetranomicon:item/valkyrian_scrap"
   }
 }

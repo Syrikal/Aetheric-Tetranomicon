@@ -1,14 +1,14 @@
 DONE: Add valkyrian scrap model
-TODO: Add valkyrian scrap texture
+DONE: Add valkyrian scrap texture
 DONE: Add valkyrian scrap recipes
 DONE: Add valkyrian scrap to Creative inventory
 
 DONE: Add phoenix scrap model
-TODO: Add phoenix scrap texture
-DONE?: Add phoenix scrap recipes
+DONE: Add phoenix scrap texture
+DONE: Add phoenix scrap recipes
 DONE: Add phoenix scrap to Creative inventory
-DONE?: Add phoenix material
-DONE?: Add phoenix replacements
+DONE: Add phoenix material
+DONE: Add phoenix replacements
 
 DONE: Add improvement names in the lang file
 
@@ -42,6 +42,6 @@ DONE: Make Ambrosium Infusion consumable
 TODO: Get permission from:
 TODO: Aether devs
 TODO: Lost Aether Content devs
-TODO: Aether Redux devs
+DONE: Aether Redux devs
 
 TODO: Port to 1.19
