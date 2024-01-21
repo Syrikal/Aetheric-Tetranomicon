@@ -15,11 +15,11 @@
         "modules": {
             "double/head_left": [
                 "double/basic_axe_left",
-                "basic_axe/lost_aether_content_phoenix"
+                "basic_axe/aether_phoenix"
             ],
             "double/head_right": [
                 "double/butt_right",
-                "butt/lost_aether_content_phoenix"
+                "butt/aether_phoenix"
             ],
             "double/handle": [
                 "double/basic_handle",
@@ -48,11 +48,11 @@
         "modules": {
             "double/head_left": [
                 "double/hoe_left",
-                "hoe/lost_aether_content_phoenix"
+                "hoe/aether_phoenix"
             ],
             "double/head_right": [
                 "double/butt_right",
-                "butt/lost_aether_content_phoenix"
+                "butt/aether_phoenix"
             ],
             "double/handle": [
                 "double/basic_handle",
@@ -81,11 +81,11 @@
         "modules": {
             "double/head_left": [
                 "double/basic_pickaxe_left",
-                "basic_pickaxe/lost_aether_content_phoenix"
+                "basic_pickaxe/aether_phoenix"
             ],
             "double/head_right": [
                 "double/basic_pickaxe_right",
-                "basic_pickaxe/lost_aether_content_phoenix"
+                "basic_pickaxe/aether_phoenix"
             ],
             "double/handle": [
                 "double/basic_handle",
@@ -115,7 +115,7 @@
         "modules": {
             "single/head": [
                 "single/basic_shovel",
-                "basic_shovel/lost_aether_content_phoenix"
+                "basic_shovel/aether_phoenix"
             ],
             "single/handle": [
                 "single/basic_handle",
@@ -143,7 +143,7 @@
         "modules": {
             "sword/blade": [
                 "sword/basic_blade",
-                "basic_blade/lost_aether_content_phoenix"
+                "basic_blade/aether_phoenix"
             ],
             "sword/hilt": [
                 "sword/basic_hilt",
@@ -151,44 +151,16 @@
             ],
             "sword/pommel": [
                 "sword/decorative_pommel",
-                "decorative_pommel/lost_aether_content_phoenix"
+                "decorative_pommel/aether_phoenix"
             ],
             "sword/guard": [
                 "sword/makeshift_guard",
-                "makeshift_guard/lost_aether_content_phoenix"
+                "makeshift_guard/aether_phoenix"
             ]
         },
         "improvements": {
             "sword/blade:aetheric_tetranomicon/phoenix": 0,
             "sword/blade:aetheric_tetranomicon/aetheric": 0
-        }
-    },
-    {
-        "conditions": [
-            {
-                "type": "forge:mod_loaded",
-                "modid": "lost_aether_content"
-            }
-        ],
-        "predicate": {
-            "items": [
-                "aether:phoenix_bow"
-            ]
-        },
-        "item": "tetra:modular_bow",
-        "modules": {
-            "bow/stave": [
-                "bow/straight_stave",
-                "straight_stave/lost_aether_content_phoenix"
-            ],
-            "bow/string": [
-                "bow/basic_string",
-                "basic_string/string"
-            ]
-        },
-        "improvements": {
-            "bow/stave:aetheric_tetranomicon/phoenix": 0,
-            "bow/stave:aetheric_tetranomicon/aetheric": 0
         }
     }
 ]

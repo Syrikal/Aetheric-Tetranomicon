@@ -3,6 +3,8 @@
     "tetra.material.aether_gravitite.prefix": "Gravitite",
     "tetra.material.aether_holystone": "Holystone",
     "tetra.material.aether_holystone.prefix": "Holystone",
+    "tetra.material.aether_phoenix": "Phoenix",
+    "tetra.material.aether_phoenix.prefix": "Phoenix",
     "tetra.material.aether_skyroot": "Skyroot",
     "tetra.material.aether_skyroot.prefix": "Skyroot",
     "tetra.material.aether_valkyrie": "Valkyrie",
@@ -27,6 +29,8 @@
     "tetra.improvement.aetheric_tetranomicon/levitator_tool.description": "Capable of launching blocks",
     "tetra.improvement.aetheric_tetranomicon/levitator_weapon.name": "Levitator",
     "tetra.improvement.aetheric_tetranomicon/levitator_weapon.description": "Capable of launching creatures",
+    "tetra.improvement.aetheric_tetranomicon/phoenix.name": "Phoenix",
+    "tetra.improvement.aetheric_tetranomicon/phoenix.description": "Auto-smelting and increased damage against burning targets",
     "tetra.improvement.aetheric_tetranomicon/tenacity_tool.name": "Tenacity",
     "tetra.improvement.aetheric_tetranomicon/tenacity_tool.description":  "Mining speed increases at low durability",
     "tetra.improvement.aetheric_tetranomicon/tenacity_weapon.name": "Tenacity",
@@ -91,13 +95,6 @@
     
     "tetra.material.socket_deep_aether_skyjade": "Skyjade socket",
     "tetra.material.socket_deep_aether_skyjade.prefix": "§qSkyjade§r",
-
-
-    "tetra.material.lost_aether_content_phoenix": "Phoenix",
-    "tetra.material.lost_aether_content_phoenix.prefix": "Phoenix",
-
-    "tetra.improvement.aetheric_tetranomicon/phoenix.name": "Phoenix",
-    "tetra.improvement.aetheric_tetranomicon/phoenix.description": "Auto-smelting and increased damage against burning targets",
 
 
     "item.aetheric_tetranomicon.valkyrian_scrap": "Valkyrian Scrap",

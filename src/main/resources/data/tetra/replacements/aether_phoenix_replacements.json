@@ -1,0 +1,30 @@
+[
+    {
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "aether"
+            }
+        ],
+        "predicate": {
+            "items": [
+                "aether:phoenix_bow"
+            ]
+        },
+        "item": "tetra:modular_bow",
+        "modules": {
+            "bow/stave": [
+                "bow/straight_stave",
+                "straight_stave/aether_phoenix"
+            ],
+            "bow/string": [
+                "bow/basic_string",
+                "basic_string/string"
+            ]
+        },
+        "improvements": {
+            "bow/stave:aetheric_tetranomicon/phoenix": 0,
+            "bow/stave:aetheric_tetranomicon/aetheric": 0
+        }
+    }
+]

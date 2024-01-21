@@ -1,5 +1,5 @@
 {
-    "key": "lost_aether_content_phoenix",
+    "key": "aether_phoenix",
     "category": "metal",
     "primary": 7,
     "secondary": 2.9,
@@ -34,7 +34,7 @@
     "conditions": [
         {
             "type": "forge:mod_loaded",
-            "modid": "lost_aether_content"
+            "modid": "aether"
         }
     ]
 }
