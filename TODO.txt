@@ -40,7 +40,7 @@ DONE: Make Ambrosium Infusion only apply to veridium modules
 DONE: Make Ambrosium Infusion consumable
 
 TODO: Get permission from:
-TODO: Aether devs
+DONE: Aether devs
 TODO: Lost Aether Content devs
 DONE: Aether Redux devs
 
