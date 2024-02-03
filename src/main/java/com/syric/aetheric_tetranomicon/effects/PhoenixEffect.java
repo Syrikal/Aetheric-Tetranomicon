@@ -12,7 +12,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.level.Level;
+import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -27,13 +27,14 @@ import se.mickelus.tetra.effect.ItemEffect;
 import se.mickelus.tetra.items.modular.ModularItem;
 
 import java.util.List;
+import java.util.Optional;
 
 public class PhoenixEffect {
     public static final ItemEffect phoenix = ItemEffect.get("aetheric_tetranomicon:phoenix");
 
     /**
      * Phoenix tools auto-smelt block drops.
-     * Some of this code is copied from the Aether: Lost Content Addon mod.
+     * Code from Aether: Lost Content used as reference.
      */
     @SubscribeEvent
     public void destroyBlock(BlockEvent.BreakEvent event) {
@@ -59,25 +60,22 @@ public class PhoenixEffect {
                     }
 
                     List<ItemStack> drops = Block.getDrops(state, level, pos, level.getBlockEntity(pos), player, player.getMainHandItem());
-                    drops.forEach((itemStack) -> {
-                        Block.popResource(level.getLevel(), pos, getSmeltedResult(itemStack, level.getLevel()));
-                    });
+
+                    for (ItemStack drop : drops) {
+                        Container container = new SimpleContainer(drop);
+                        Optional<SmeltingRecipe> recipe = level.getRecipeManager().getRecipeFor(RecipeType.SMELTING, container, level);
+                        if (recipe.isPresent()) {
+                            ItemStack smelted_stack = recipe.get().getResultItem(level.registryAccess());
+                            smelted_stack.setCount(drop.getCount());
+                            Block.popResource(level, pos, smelted_stack);
+                        } else {
+                            Block.popResource(level, pos, drop);
+                        }
+                    }
                     level.getLevel().setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState());
                 }
             }
         }
-    }
-
-    /**
-     * Copied from the Aether: Lost Content Addon mod
-     */
-    private ItemStack getSmeltedResult(ItemStack stack, Level level) {
-        Container inventory = new SimpleContainer(stack);
-        ItemStack output = level.getRecipeManager().getRecipeFor(RecipeType.SMELTING, inventory, level).map((furnaceRecipe) -> {
-            return furnaceRecipe.assemble(inventory, level.registryAccess());
-        }).orElse(stack);
-        output.setCount(stack.getCount());
-        return output;
     }
 
     /**

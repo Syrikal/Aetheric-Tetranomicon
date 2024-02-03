@@ -39,9 +39,9 @@ DONE: Add Ambrosium Infusion improvement
 DONE: Make Ambrosium Infusion only apply to veridium modules
 DONE: Make Ambrosium Infusion consumable
 
-TODO: Get permission from:
+DONE: Get permission from:
 DONE: Aether devs
-TODO: Lost Aether Content devs
+DONE: Lost Aether Content devs
 DONE: Aether Redux devs
 
 TODO: Port to 1.19
