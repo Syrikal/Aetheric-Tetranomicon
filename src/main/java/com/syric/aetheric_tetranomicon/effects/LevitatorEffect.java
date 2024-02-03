@@ -66,7 +66,7 @@ public class LevitatorEffect {
 
                 if (playerNotSneaking && correctTool && blockIsFree && notBlockEntity && breakable && notDoubleBlockHalf && notBlacklisted) {
                     if (!level.isClientSide()) {
-                        FloatingBlockEntity entity = new FloatingBlockEntity(level, (double) blockPos.getX() + 0.5, (double) blockPos.getY(), (double) blockPos.getZ() + 0.5, blockState);
+                        FloatingBlockEntity entity = new FloatingBlockEntity(level, (double) blockPos.getX() + 0.5, blockPos.getY(), (double) blockPos.getZ() + 0.5, blockState);
                         entity.setNatural(false);
                         if (blockState.is(BlockTags.ANVIL)) {
                             entity.setHurtsEntities(2.0F, 40);

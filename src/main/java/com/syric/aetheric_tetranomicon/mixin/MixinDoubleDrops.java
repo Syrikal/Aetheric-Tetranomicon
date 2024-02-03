@@ -1,7 +1,6 @@
 package com.syric.aetheric_tetranomicon.mixin;
 
 import com.aetherteam.aether.loot.functions.DoubleDrops;
-import com.syric.aetheric_tetranomicon.AethericTetranomicon;
 import com.syric.aetheric_tetranomicon.effects.HarvesterEffect;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;

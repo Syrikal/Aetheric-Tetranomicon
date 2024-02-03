@@ -1,7 +1,6 @@
 package com.syric.aetheric_tetranomicon.effects;
 
 import com.aetherteam.aether.block.AetherBlockStateProperties;
-import com.syric.aetheric_tetranomicon.AethericTetranomicon;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.state.BlockState;

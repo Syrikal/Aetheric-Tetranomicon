@@ -6,6 +6,7 @@ import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -16,9 +17,6 @@ public class MixinAbstractArrow {
     protected boolean inGround;
     @Shadow
     protected int inGroundTime;
-
-    public MixinAbstractArrow() {
-    }
 
     @Inject(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/projectile/Projectile;tick()V", shift = At.Shift.AFTER))
     private void tick(CallbackInfo ci) {
@@ -42,6 +40,7 @@ public class MixinAbstractArrow {
         }
     }
 
+    @Unique
     private void spawnParticles(AbstractArrow arrow) {
         Level var3 = arrow.level();
         if (var3 instanceof ServerLevel serverLevel) {
