@@ -16,8 +16,8 @@
         "aetheric_tetranomicon/ambrosia_seeker_weapon": 0
     },
     "tints": {
-        "glyph": "A3A3A3",
-        "texture": "A3A3A3"
+        "glyph": "a3a3a3",
+        "texture": "a3a3a3"
     },
     "textures": [
         "crude",

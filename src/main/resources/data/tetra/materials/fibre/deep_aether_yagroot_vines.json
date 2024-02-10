@@ -30,7 +30,7 @@
         ]
     },
     "requiredTools": {
-        "cut": "minecraft:diamond"
+        "cut": "minecraft:iron"
     },
     "conditions": [
         {
