@@ -12,6 +12,24 @@
       },
       "moduleKey": "single/binding",
       "moduleVariant": "single_binding/valkyrian"
+    },
+    {
+      "material": {
+        "items": [
+          "ancient_aether:valkyrum"
+        ]
+      },
+      "requiredTools": {
+        "hammer_dig": "minecraft:iron"
+      },
+      "moduleKey": "single/binding",
+      "moduleVariant": "single_binding/valkyrian",
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "ancient_aether"
+        }
+      ]
     }
   ]
 }

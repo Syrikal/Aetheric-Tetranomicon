@@ -1,0 +1,41 @@
+{
+    "key": "ancient_aether_valkyrum",
+    "category": "metal",
+    "primary": 7,
+    "secondary": 2.8,
+    "tertiary": 3.7,
+    "durability": 2031,
+    "integrityCost": 2,
+    "integrityGain": 6,
+    "magicCapacity": 90,
+    "toolLevel": "tetra:maxed_forge_hammer",
+    "toolEfficiency": 9,
+    "improvements": {
+        "aetheric_tetranomicon/aetheric": 0,
+        "aetheric_tetranomicon/valkyrie_whole": 0,
+        "aetheric_tetranomicon/valkyrie_half": 0
+    },
+    "tints": {
+        "glyph": "f4eddc",
+        "texture": "f4eddc"
+    },
+    "textures": [
+        "shiny",
+        "metal",
+        "default"
+    ],
+    "material": {
+        "items": [
+            "ancient_aether:valkyrum"
+        ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:iron"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "ancient_aether"
+        }
+    ]
+}

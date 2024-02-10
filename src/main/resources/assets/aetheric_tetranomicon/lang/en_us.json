@@ -43,7 +43,7 @@
     "tetra.variant.double_binding/valkyrian": "Valkyrian binding",
     "tetra.variant.single_binding/valkyrian": "Valkyrian binding",
     "tetra.variant.sword_binding/valkyrian": "Valkyrian binding",
-    
+
     
     "tetra.material.aether_redux_blightwillow": "Blightwillow",
     "tetra.material.aether_redux_blightwillow.prefix": "Blightwillow",
@@ -68,6 +68,14 @@
 
     "tetra.improvement.aetheric_tetranomicon/veridium_infusable.name": "Infusable",
     "tetra.improvement.aetheric_tetranomicon/veridium_infusable.description": "Right-click with Ambrosium Shards to temporarily enhance power",
+    
+    
+    "tetra.material.ancient_aether_highsproot": "Highsproot",
+    "tetra.material.ancient_aether_highsproot.prefix": "Highsproot",
+    "tetra.material.ancient_aether_sakura": "Sakura",
+    "tetra.material.ancient_aether_sakura.prefix": "Sakura",
+    "tetra.material.ancient_aether_valkyrum": "Valkyrum",
+    "tetra.material.ancient_aether_valkyrum.prefix": "Valkyrum",
     
     
     "tetra.material.deep_aether_aseterite": "Aseterite",

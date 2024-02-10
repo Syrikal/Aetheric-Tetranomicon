@@ -139,6 +139,9 @@ dependencies {
     //Aether Lost Content (requires Aether and structure gel)
     implementation fg.deobf("curse.maven:aether-lost-content-318602:4927038")
 
+//    //Ancient Aether (requires Aeroblender and Terrablender)
+//    implementation fg.deobf("curse.maven:ancient-aether-886751:5078007")
+
     //Requirements
     implementation fg.deobf("curse.maven:geckolib-388172:4933987")
     implementation fg.deobf("curse.maven:terrablender-563928:4647094")

@@ -1,0 +1,38 @@
+{
+    "key": "ancient_aether_sakura",
+    "category": "wood",
+    "primary": 3.6,
+    "secondary": 2.7,
+    "tertiary": 6,
+    "durability": 1024,
+    "integrityCost": 1,
+    "integrityGain": 6,
+    "magicCapacity": 108,
+    "toolLevel": "minecraft:wood",
+    "toolEfficiency": 3,
+    "improvements": {
+        "aetheric_tetranomicon/aetheric": 0
+    },
+    "tints": {
+        "glyph": "473832",
+        "texture": "473832"
+    },
+    "textures": [
+        "crude",
+        "wooden"
+    ],
+    "material": {
+        "items": [
+            "ancient_aether:sakura_planks"
+        ]
+    },
+    "requiredTools": {
+        "axe_dig": "minecraft:iron"
+    },
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "ancient_aether"
+        }
+    ]
+}
