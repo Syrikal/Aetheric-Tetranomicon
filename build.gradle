@@ -124,7 +124,7 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     //Tetra (requires mutil)
-    implementation fg.deobf("curse.maven:tetra-289712:4857842")
+    implementation fg.deobf("curse.maven:tetra-289712:5097001")
     implementation fg.deobf("curse.maven:mutil-351914:4824501")
 
     //Aether
