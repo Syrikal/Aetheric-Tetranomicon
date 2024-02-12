@@ -10,7 +10,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
@@ -121,7 +121,7 @@ public class TenacityEffect {
     @SubscribeEvent
     public void breakEvent(BlockEvent.BreakEvent event) {
         Player player = event.getPlayer();
-        Level level = player.level();
+        Level level = player.level;
         BlockPos blockPos = event.getPos();
         ItemStack heldStack = player.getMainHandItem();
         BlockState blockState = event.getState();
@@ -132,7 +132,7 @@ public class TenacityEffect {
             boolean notCanceled = !event.isCanceled();
             boolean zanite = effectlevel > 0;
             boolean goldenOak = blockState.is(AetherBlocks.GOLDEN_OAK_LOG.get()) || blockState.is(AetherBlocks.GOLDEN_OAK_WOOD.get());
-            boolean noSilkTouch = !EnchantmentHelper.hasSilkTouch(heldStack);
+            boolean noSilkTouch = heldStack.getEnchantmentLevel(Enchantments.SILK_TOUCH) == 0;
 
             if (zanite && notCanceled && goldenOak && noSilkTouch) {
                 boolean two = level.getRandom().nextBoolean();

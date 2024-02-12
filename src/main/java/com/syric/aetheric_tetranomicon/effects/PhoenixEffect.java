@@ -65,7 +65,7 @@ public class PhoenixEffect {
                         Container container = new SimpleContainer(drop);
                         Optional<SmeltingRecipe> recipe = level.getRecipeManager().getRecipeFor(RecipeType.SMELTING, container, level);
                         if (recipe.isPresent()) {
-                            ItemStack smelted_stack = recipe.get().getResultItem(level.registryAccess());
+                            ItemStack smelted_stack = recipe.get().getResultItem();
                             smelted_stack.setCount(drop.getCount());
                             Block.popResource(level, pos, smelted_stack);
                         } else {

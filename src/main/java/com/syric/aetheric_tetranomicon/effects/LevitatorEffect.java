@@ -17,7 +17,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -109,7 +109,7 @@ public class LevitatorEffect {
                 boolean notCanceled = !event.isCanceled();
                 boolean fullStrengthAttack = player.getAttackStrengthScale(1.0F) == 1.0F;
                 boolean validEntity = !target.getType().is(AetherTags.Entities.UNLAUNCHABLE);
-                boolean onGround = target.onGround() || target.isInFluidType();
+                boolean onGround = target.isOnGround() || target.isInFluidType();
 
 //                AethericTetranomicon.LOGGER.info(String.format(
 //                        "Levitator: %s, Not Canceled: %s, Full Strength Attack: %s, Valid Entity: %s, On Ground: %s",
@@ -157,7 +157,7 @@ public class LevitatorEffect {
             boolean notCanceled = !event.isCanceled();
             boolean critArrow = drawProgress >= 20;
             boolean validEntity = !target.getType().is(AetherTags.Entities.UNLAUNCHABLE);
-            boolean onGround = target.onGround();
+            boolean onGround = target.isOnGround();
 
 //        AethericTetranomicon.LOGGER.info(String.format("Arrow hit detected! Not canceled: %s, Levitator: %s", notCanceled, levitator));
 
@@ -180,7 +180,7 @@ public class LevitatorEffect {
     @SubscribeEvent
     public void breakEvent(BlockEvent.BreakEvent event) {
         Player player = event.getPlayer();
-        Level level = player.level();
+        Level level = player.level;
         BlockPos blockPos = event.getPos();
         ItemStack heldStack = player.getMainHandItem();
         BlockState blockState = event.getState();
@@ -191,7 +191,7 @@ public class LevitatorEffect {
             boolean notCanceled = !event.isCanceled();
             boolean levitator = effectlevel > 0;
             boolean goldenOak = blockState.is(AetherBlocks.GOLDEN_OAK_LOG.get()) || blockState.is(AetherBlocks.GOLDEN_OAK_WOOD.get());
-            boolean noSilkTouch = !EnchantmentHelper.hasSilkTouch(heldStack);
+            boolean noSilkTouch = heldStack.getEnchantmentLevel(Enchantments.SILK_TOUCH) == 0;
 
             if (levitator && notCanceled && goldenOak && noSilkTouch) {
                 boolean two = level.getRandom().nextBoolean();

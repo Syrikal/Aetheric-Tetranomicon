@@ -1,7 +1,7 @@
 package com.syric.aetheric_tetranomicon.mixin;
 
-import com.google.common.collect.ImmutableList;
 import com.syric.aetheric_tetranomicon.util.ArrowUtil;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ArrowItem;
@@ -14,17 +14,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 import se.mickelus.tetra.items.modular.impl.bow.ModularBowItem;
 
-import java.util.function.Function;
-
 @Mixin(ModularBowItem.class)
 public class MixinModularBowItem {
 
-    @Inject(method = "fireProjectile", at = @At(
+    @Inject(method = "fireArrow", at = @At(
             value = "INVOKE",
             target = "Lnet/minecraft/world/entity/projectile/AbstractArrow;shootFromRotation(Lnet/minecraft/world/entity/Entity;FFFFF)V",
             shift = At.Shift.AFTER),
             locals = LocalCapture.CAPTURE_FAILSOFT)
-    private static void applyTags(ItemStack itemStack, Level world, ArrowItem ammoItem, ItemStack ammoStack, ImmutableList<Function<AbstractArrow, AbstractArrow>> projectileRemappers, Player player, float basePitch, float yaw, float projectileVelocity, float accuracy, int drawProgress, double strength, int powerLevel, int punchLevel, int flameLevel, int piercingLevel, boolean hasSuspend, boolean infiniteAmmo, CallbackInfo ci, AbstractArrow projectile) {
+    private void applyTags(ItemStack itemStack, Level world, LivingEntity entity, int timeLeft, CallbackInfo ci, Player player, ItemStack ammoStack, boolean playerInfinite, int drawProgress, double strength, float velocityBonus, int suspendLevel, float projectileVelocity, ArrowItem ammoItem, boolean infiniteAmmo, int count, double multishotSpread, float accuracy, int powerLevel, int punchLevel, int flameLevel, int piercingLevel, int i, double yaw, AbstractArrow projectile) {
         ArrowUtil.addTags(itemStack, projectile, player, drawProgress);
     }
 

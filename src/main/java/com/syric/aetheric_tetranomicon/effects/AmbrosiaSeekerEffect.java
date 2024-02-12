@@ -28,7 +28,7 @@ public class AmbrosiaSeekerEffect {
     @SubscribeEvent
     public void breakEvent(BlockEvent.BreakEvent event) {
         Player player = event.getPlayer();
-        Level level = player.level();
+        Level level = player.level;
         BlockPos blockPos = event.getPos();
         ItemStack heldStack = player.getMainHandItem();
         BlockState blockState = event.getState();
@@ -65,7 +65,7 @@ public class AmbrosiaSeekerEffect {
                 boolean notCanceled = !event.isCanceled();
                 boolean fullStrengthAttack = player.getAttackStrengthScale(1.0F) == 1.0F;
                 boolean validEntity = !target.getType().is(AetherTags.Entities.NO_AMBROSIUM_DROPS);
-                boolean randomTrigger = target.level().getRandom().nextInt(25) == 0;
+                boolean randomTrigger = target.level.getRandom().nextInt(25) == 0;
 
 
                 if (ambrosia_seeker && notCanceled && fullStrengthAttack && validEntity && randomTrigger) {
@@ -97,7 +97,7 @@ public class AmbrosiaSeekerEffect {
             boolean notCanceled = !event.isCanceled();
             boolean critArrow = drawProgress >= 20;
             boolean validEntity = !target.getType().is(AetherTags.Entities.NO_AMBROSIUM_DROPS);
-            boolean randomTrigger = target.level().getRandom().nextInt(25) == 0;
+            boolean randomTrigger = target.level.getRandom().nextInt(25) == 0;
 
             if (ambrosia_seeker && notCanceled && critArrow && validEntity && randomTrigger) {
                 target.spawnAtLocation(AetherItems.AMBROSIUM_SHARD.get());

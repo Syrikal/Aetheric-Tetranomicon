@@ -23,7 +23,7 @@ public class MixinAbstractArrow {
         AbstractArrow arrow = (AbstractArrow) (Object) this;
 
         boolean phoenix = arrow.getTags().contains("phoenix");
-        boolean serverSide = !arrow.level().isClientSide;
+        boolean serverSide = !arrow.level.isClientSide;
 
         if (phoenix && serverSide) {
             if (this.inGround) {
@@ -42,7 +42,7 @@ public class MixinAbstractArrow {
 
     @Unique
     private void spawnParticles(AbstractArrow arrow) {
-        Level var3 = arrow.level();
+        Level var3 = arrow.level;
         if (var3 instanceof ServerLevel serverLevel) {
             serverLevel.sendParticles(ParticleTypes.FLAME, arrow.getX() + serverLevel.getRandom().nextGaussian() / 5.0, arrow.getY() + serverLevel.getRandom().nextGaussian() / 3.0, arrow.getZ() + serverLevel.getRandom().nextGaussian() / 5.0, 1, 0.0, 0.0, 0.0, 0.0);
         }

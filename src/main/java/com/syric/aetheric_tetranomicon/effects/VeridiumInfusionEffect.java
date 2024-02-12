@@ -6,6 +6,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ClickAction;
 import net.minecraft.world.inventory.Slot;
@@ -18,7 +19,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.zepalesque.redux.client.audio.ReduxSoundEvents;
 import net.zepalesque.redux.item.ReduxItems;
 import se.mickelus.tetra.effect.ItemEffect;
-import se.mickelus.tetra.event.ModularItemDamageEvent;
 import se.mickelus.tetra.items.modular.ModularItem;
 
 import java.util.ArrayList;
@@ -55,20 +55,39 @@ public class VeridiumInfusionEffect {
      * @param event Infused veridium tools use 4x as much durability.
      */
     @SubscribeEvent
-    public void durabilityEvent(ModularItemDamageEvent event) {
-        ItemStack stack = event.getItemStack();
-        ModularItem modularItem = (ModularItem) stack.getItem();
-        int level = modularItem.getEffectLevel(stack, veridium_infusable);
+    public void durabilityEvent(BlockEvent.BreakEvent event) {
+        Player player = event.getPlayer();
+        ItemStack stack = player.getMainHandItem();
 
-        boolean veridium = level > 0;
-        boolean infused = getInfusionLevel(stack) > 0;
-        boolean notCanceled = !event.isCanceled();
-        boolean takingDamage = event.getAmount() > 0;
+        if (stack.getItem() instanceof ModularItem modularItem) {
+            int level = modularItem.getEffectLevel(stack, veridium_infusable);
 
-        if (veridium && infused && notCanceled && takingDamage) {
-            event.setAmount(event.getAmount() * 4);
+            boolean veridium = level > 0;
+            boolean infused = getInfusionLevel(stack) > 0;
+            boolean notCanceled = !event.isCanceled();
+            boolean notCreative = !player.isCreative();
+//            boolean takingDamage = event.getAmount() > 0;
+
+            if (veridium && infused && notCanceled && notCreative) {
+                stack.hurtAndBreak(3, player, LivingEntity::stopUsingItem);
+            }
         }
     }
+
+//    public void durabilityEvent(ModularItemDamageEvent event) {
+//        ItemStack stack = event.getItemStack();
+//        ModularItem modularItem = (ModularItem) stack.getItem();
+//        int level = modularItem.getEffectLevel(stack, veridium_infusable);
+//
+//        boolean veridium = level > 0;
+//        boolean infused = getInfusionLevel(stack) > 0;
+//        boolean notCanceled = !event.isCanceled();
+//        boolean takingDamage = event.getAmount() > 0;
+//
+//        if (veridium && infused && notCanceled && takingDamage) {
+//            event.setAmount(event.getAmount() * 4);
+//        }
+//    }
 
     //Handle tooltip
     public static List<Component> addTooltip(ItemStack stack) {
@@ -115,7 +134,7 @@ public class VeridiumInfusionEffect {
             if (veridium && allowed_slot && carried_is_ambrosium && right_click && not_full_charge) {
 //                AethericTetranomicon.LOGGER.info("Attempting to increase infusion level");
                 increaseInfusionLevel(stackedOnItemStack);
-                player.playSound(ReduxSoundEvents.INFUSE_ITEM.get(), 0.8F, 0.8F + player.level().getRandom().nextFloat() * 0.4F);
+                player.playSound(ReduxSoundEvents.INFUSE_ITEM.get(), 0.8F, 0.8F + player.level.getRandom().nextFloat() * 0.4F);
                 carriedItemStack.shrink(1);
                 event.setCanceled(true);
             }
