@@ -123,33 +123,33 @@ dependencies {
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    //Tetra (requires mutil)
-    implementation fg.deobf("curse.maven:tetra-289712:5097001")
-    implementation fg.deobf("curse.maven:mutil-351914:4824501")
+    //Tetra: Requires mutil
+    implementation fg.deobf("curse.maven:tetra-289712:4448541")
+    implementation fg.deobf("curse.maven:mutil-351914:3941314")
 
     //Aether
-    implementation fg.deobf("curse.maven:aether-255308:4926220")
+    implementation fg.deobf("curse.maven:aether-255308:5068007")
 
     //Aether Redux (requires Aether, terrablender and aeroblender)
-    implementation fg.deobf("curse.maven:aether-redux-867237:4990922")
+    implementation fg.deobf("curse.maven:aether-redux-867237:4990917")
 
     //Deep Aether (requires Aether, geckolib, terrablender, and aeroblender)
-    implementation fg.deobf("curse.maven:deep-aether-852465:4861346")
+    implementation fg.deobf("curse.maven:deep-aether-852465:5076615")
 
     //Aether Lost Content (requires Aether and structure gel)
-    implementation fg.deobf("curse.maven:aether-lost-content-318602:4927038")
+//    implementation fg.deobf("curse.maven:aether-lost-content-318602:4772920")
 
 //    //Ancient Aether (requires Aeroblender and Terrablender)
 //    implementation fg.deobf("curse.maven:ancient-aether-886751:5078007")
 
     //Requirements
-    implementation fg.deobf("curse.maven:geckolib-388172:4933987")
-    implementation fg.deobf("curse.maven:terrablender-563928:4647094")
-    implementation fg.deobf("curse.maven:aeroblender-879879:4789008")
-    implementation fg.deobf("curse.maven:structure-gel-api-378802:4975615")
+    implementation fg.deobf("curse.maven:geckolib-388172:4407241")
+    implementation fg.deobf("curse.maven:terrablender-563928:4618490")
+    implementation fg.deobf("curse.maven:aeroblender-879879:4764797")
+    implementation fg.deobf("curse.maven:structure-gel-api-378802:4765558")
 
     //JEI
-    implementation fg.deobf("curse.maven:jei-238222:4712868")
+    implementation fg.deobf("curse.maven:jei-238222:4712866")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
