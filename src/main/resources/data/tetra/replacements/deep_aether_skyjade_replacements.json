@@ -27,7 +27,8 @@
             ]
         },
         "improvements": {
-            "double/head_left:aetheric_tetranomicon/aetheric": 0
+            "double/head_left:aetheric_tetranomicon/aetheric": 0,
+            "double/head_left:aetheric_tetranomicon/brittle_tool": 0
         }
     },
     {
@@ -58,7 +59,8 @@
             ]
         },
         "improvements": {
-            "double/head_left:aetheric_tetranomicon/aetheric": 0
+            "double/head_left:aetheric_tetranomicon/aetheric": 0,
+            "double/head_left:aetheric_tetranomicon/brittle_tool": 0
         }
     },
     {
@@ -90,7 +92,9 @@
         },
         "improvements": {
             "double/head_left:aetheric_tetranomicon/aetheric": 0,
-            "double/head_right:aetheric_tetranomicon/aetheric": 0
+            "double/head_right:aetheric_tetranomicon/aetheric": 0,
+            "double/head_left:aetheric_tetranomicon/brittle_tool": 0,
+            "double/head_right:aetheric_tetranomicon/brittle_tool": 0
         }
     },
     {
@@ -117,7 +121,8 @@
             ]
         },
         "improvements": {
-            "single/head:aetheric_tetranomicon/aetheric": 0
+            "single/head:aetheric_tetranomicon/aetheric": 0,
+            "single/head:aetheric_tetranomicon/brittle_tool": 0
         }
     },
     {
@@ -152,7 +157,8 @@
             ]
         },
         "improvements": {
-            "sword/blade:aetheric_tetranomicon/aetheric": 0
+            "sword/blade:aetheric_tetranomicon/aetheric": 0,
+            "sword/blade:aetheric_tetranomicon/brittle_weapon": 0
         }
     }
 ]

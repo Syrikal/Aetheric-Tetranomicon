@@ -23,13 +23,19 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
+import net.minecraftforge.common.TierSortingRegistry;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import se.mickelus.tetra.effect.ItemEffect;
+import se.mickelus.tetra.items.modular.ItemModularHandheld;
 import se.mickelus.tetra.items.modular.ModularItem;
+import se.mickelus.tetra.util.TierHelper;
+import se.mickelus.tetra.util.ToolActionHelper;
+
+import java.util.Objects;
 
 public class LevitatorEffect {
     public static final ItemEffect levitator_tool = ItemEffect.get("aetheric_tetranomicon:levitator_tool");
@@ -55,7 +61,10 @@ public class LevitatorEffect {
                 InteractionHand hand = event.getHand();
 
                 boolean playerNotSneaking = !player.isShiftKeyDown();
-                boolean correctTool = heldStack.isCorrectToolForDrops(blockState);
+                boolean correctTool = isCorrectToolForDrops(heldStack, blockState);
+
+//                AethericTetranomicon.LOGGER.info("Checking whether gravitite tool is correct for " + blockState.getBlock() + ", conclusion: " + correctTool);
+
                 boolean blockIsFree = FloatingBlock.isFree(level.getBlockState(blockPos.above()));
                 boolean notBlockEntity = level.getBlockEntity(blockPos) == null;
                 boolean breakable = blockState.getDestroySpeed(level, blockPos) >= 0.0F;
@@ -118,10 +127,10 @@ public class LevitatorEffect {
                 if (levitator && notCanceled && fullStrengthAttack && validEntity && onGround) {
 //                    AethericTetranomicon.LOGGER.info("detected modular gravitite weapon, triggering ability");
 //                    AethericTetranomicon.LOGGER.info("Target's delta movement before push is " + target.getDeltaMovement());
+                    target.setOnGround(false);
                     target.push(0.0, 1.0, 0.0);
 //                    AethericTetranomicon.LOGGER.info("Target's delta movement after push is " + target.getDeltaMovement());
                     target.hurtMarked = true;
-                    target.setOnGround(false);
 //                    target.setSecondsOnFire(1);
 
                     if (target instanceof ServerPlayer serverPlayer) {
@@ -199,6 +208,18 @@ public class LevitatorEffect {
                 level.addFreshEntity(itemEntity);
             }
         }
+    }
+
+
+    private boolean isCorrectToolForDrops(ItemStack stack, BlockState state) {
+        if (stack.getItem() instanceof ItemModularHandheld) {
+            return ToolActionHelper.getAppropriateTools(state).stream().map((requiredTool) -> {
+                return ((ItemModularHandheld) stack.getItem()).getHarvestTier(stack, requiredTool);
+            }).map(TierHelper::getTier).filter(Objects::nonNull).anyMatch((tier) -> {
+                return TierSortingRegistry.isCorrectTierForDrops(tier, state);
+            });
+        }
+        return false;
     }
 
 }

@@ -26,6 +26,7 @@ public class AethericTetranomicon {
         // Add effect registration here
         MinecraftForge.EVENT_BUS.register(new AethericEffect());
         MinecraftForge.EVENT_BUS.register(new AmbrosiaSeekerEffect());
+        MinecraftForge.EVENT_BUS.register(new BrittleEffect());
         MinecraftForge.EVENT_BUS.register(new HarvesterEffect());
         MinecraftForge.EVENT_BUS.register(new LevitatorEffect());
         MinecraftForge.EVENT_BUS.register(new PhoenixEffect());

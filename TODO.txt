@@ -44,4 +44,16 @@ DONE: Aether devs
 DONE: Lost Aether Content devs
 DONE: Aether Redux devs
 
-TODO: Port to 1.19
+DONE: Port to 1.19
+
+DONE: Fix Harvester in 1.19 for tools
+DONE: Fix Harvester in 1.19 for weapons
+DONE: Levitator should only affect tool-appropriate blocks
+DONE: Add Skyjade ability
+DONE: Fix ambrosium infusion on swords
+DONE: Get it to work on servers
+
+TODO: Port Harvester for weapons to 1.20
+TODO: Port ambrosium infusion speed to 1.20
+TODO: Port Skyjade ability to 1.20
+TODO: Fix that GitHub bug

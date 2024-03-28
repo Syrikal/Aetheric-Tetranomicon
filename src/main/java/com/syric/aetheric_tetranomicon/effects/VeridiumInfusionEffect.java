@@ -6,11 +6,15 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ClickAction;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.event.ItemAttributeModifierEvent;
 import net.minecraftforge.event.ItemStackedOnOtherEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -23,9 +27,12 @@ import se.mickelus.tetra.items.modular.ModularItem;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class VeridiumInfusionEffect {
     public static final ItemEffect veridium_infusable = ItemEffect.get("aetheric_tetranomicon:veridium_infusable");
+    private static final UUID ATTACK_SPEED_MODIFIER = UUID.fromString("799c33ad-289a-41de-a707-fcd262ffe40f");
+
 
     //Handle mining speed
     /**
@@ -111,8 +118,8 @@ public class VeridiumInfusionEffect {
     @SubscribeEvent
     public void infuseEvent(ItemStackedOnOtherEvent event) {
 //        AethericTetranomicon.LOGGER.info("ItemStackedOnOtherEvent detected");
-        ItemStack carriedItemStack = event.getStackedOnItem();
-        ItemStack stackedOnItemStack = event.getCarriedItem();
+        ItemStack stackedOnItemStack = event.getStackedOnItem();
+        ItemStack carriedItemStack = event.getCarriedItem();
         Slot slot = event.getSlot();
         Player player = event.getPlayer();
         ClickAction click = event.getClickAction();
@@ -214,5 +221,21 @@ public class VeridiumInfusionEffect {
 //        AethericTetranomicon.LOGGER.info(String.format("setInfusionLevel attempted to set an item's charge to %s", level));
     }
 
+    //Handle swing speed
+    @SubscribeEvent
+    public void modifySwingSpeed(ItemAttributeModifierEvent event) {
+        ItemStack stack = event.getItemStack();
+        if (stack.getItem() instanceof ModularItem modularItem && modularItem.getEffectLevel(stack, veridium_infusable) > 0 && getInfusionLevel(stack) > 0) {
+//            AethericTetranomicon.LOGGER.info("Found infused veridium item");
+//            AethericTetranomicon.LOGGER.info("Slot: " + event.getSlotType());
+//            AethericTetranomicon.LOGGER.info("Modifiers: " + event.getModifiers());
+            if (event.getSlotType() == EquipmentSlot.MAINHAND) {
+//                AethericTetranomicon.LOGGER.info("Slot is MAINHAND");
+                event.addModifier(Attributes.ATTACK_SPEED,
+                        new AttributeModifier(ATTACK_SPEED_MODIFIER, "aetheric_tetranomicon_veridium", 0.3, AttributeModifier.Operation.ADDITION));
+            }
+//            AethericTetranomicon.LOGGER.info("Final Modifiers: " + event.getModifiers());
+        }
+    }
 
 }

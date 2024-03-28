@@ -18,6 +18,12 @@
     }
   },
   {
+    "key": "aetheric_tetranomicon/brittle_tool",
+    "effects": {
+      "aetheric_tetranomicon:brittle_tool": 1
+    }
+  },
+  {
     "key": "aetheric_tetranomicon/tenacity_tool",
     "effects": {
       "aetheric_tetranomicon:tenacity_tool": 1

@@ -1,5 +1,5 @@
 {
-    "type": "aether:enchanting",
+    "type": "minecraft:smelting",
     "cookingtime": 1500,
     "ingredient": {
         "item": "aether:valkyrie_lance"
