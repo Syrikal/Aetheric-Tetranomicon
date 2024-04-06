@@ -11,7 +11,9 @@
     "toolLevel": "minecraft:iron",
     "toolEfficiency": 10,
     "improvements": {
-        "aetheric_tetranomicon/aetheric": 0
+        "aetheric_tetranomicon/aetheric": 0,
+        "aetheric_tetranomicon/brittle_tool": 0,
+        "aetheric_tetranomicon/brittle_weapon": 0
     },
     "tints": {
         "glyph": "b2e865",

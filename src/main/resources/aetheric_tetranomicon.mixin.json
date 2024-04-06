@@ -6,8 +6,7 @@
   "mixins": [
     "MixinAbstractArrow",
     "MixinDoubleDrops",
-    "MixinModularBowItem",
-    "MixinModularCrossbowItem",
+    "MixinDoubleDropsModifier",
     "MixinModularItem",
     "MixinToolHooks",
     "MixinWeaponHooks"

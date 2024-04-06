@@ -29,8 +29,8 @@ public class ATItems {
     public static void buildCreativeModeTabs(BuildCreativeModeTabContentsEvent event) {
         CreativeModeTab tab = event.getTab();
         if (tab == AetherCreativeTabs.AETHER_INGREDIENTS.get()) {
-            event.getEntries().putAfter(new ItemStack(AetherItems.SWET_BALL.get()), new ItemStack(VALKYRIAN_SCRAP.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.getEntries().putAfter(new ItemStack(VALKYRIAN_SCRAP.get()), new ItemStack(PHOENIX_SCRAP.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AetherItems.AMBROSIUM_SHARD.get()), new ItemStack(PHOENIX_SCRAP.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(AetherItems.AMBROSIUM_SHARD.get()), new ItemStack(VALKYRIAN_SCRAP.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 

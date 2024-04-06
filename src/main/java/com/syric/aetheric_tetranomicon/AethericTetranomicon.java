@@ -3,6 +3,7 @@ package com.syric.aetheric_tetranomicon;
 import com.mojang.logging.LogUtils;
 import com.syric.aetheric_tetranomicon.effects.*;
 import com.syric.aetheric_tetranomicon.registry.ATItems;
+import com.syric.aetheric_tetranomicon.util.ArrowUtil;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -26,12 +27,14 @@ public class AethericTetranomicon {
         // Add effect registration here
         MinecraftForge.EVENT_BUS.register(new AethericEffect());
         MinecraftForge.EVENT_BUS.register(new AmbrosiaSeekerEffect());
+        MinecraftForge.EVENT_BUS.register(new BrittleEffect());
         MinecraftForge.EVENT_BUS.register(new HarvesterEffect());
         MinecraftForge.EVENT_BUS.register(new LevitatorEffect());
         MinecraftForge.EVENT_BUS.register(new PhoenixEffect());
         MinecraftForge.EVENT_BUS.register(new TenacityEffect());
         MinecraftForge.EVENT_BUS.register(new ValkyrieEffect());
         MinecraftForge.EVENT_BUS.register(new VeridiumInfusionEffect());
+        MinecraftForge.EVENT_BUS.register(new ArrowUtil());
 
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();

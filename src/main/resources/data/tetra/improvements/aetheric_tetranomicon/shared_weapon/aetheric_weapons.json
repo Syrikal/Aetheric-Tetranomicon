@@ -6,9 +6,21 @@
     }
   },
   {
+    "key": "aetheric_tetranomicon/harvester",
+    "effects": {
+      "aetheric_tetranomicon:harvester": 1
+    }
+  },
+  {
     "key": "aetheric_tetranomicon/levitator_weapon",
     "effects": {
       "aetheric_tetranomicon:levitator_weapon": 1
+    }
+  },
+  {
+    "key": "aetheric_tetranomicon/brittle_weapon",
+    "effects": {
+      "aetheric_tetranomicon:brittle_weapon": 1
     }
   },
   {
