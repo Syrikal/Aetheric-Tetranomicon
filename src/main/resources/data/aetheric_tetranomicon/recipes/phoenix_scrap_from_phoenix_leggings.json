@@ -2,10 +2,10 @@
     "type": "minecraft:smelting",
     "cookingtime": 1000,
     "ingredient": {
-        "item": "aether:valkyrie_gloves"
+        "item": "aether:phoenix_leggings"
     },
     "result": {
-        "item": "aetheric_tetranomicon:valkyrian_scrap",
+        "item": "aetheric_tetranomicon:phoenix_scrap",
         "count": 3
     },
     "conditions": [

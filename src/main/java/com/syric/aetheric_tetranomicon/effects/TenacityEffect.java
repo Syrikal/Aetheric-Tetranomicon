@@ -13,12 +13,22 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import se.mickelus.tetra.blocks.workbench.gui.WorkbenchStatsGui;
 import se.mickelus.tetra.effect.ItemEffect;
+import se.mickelus.tetra.gui.stats.bar.GuiStatBar;
+import se.mickelus.tetra.gui.stats.getter.IStatGetter;
+import se.mickelus.tetra.gui.stats.getter.LabelGetterBasic;
+import se.mickelus.tetra.gui.stats.getter.StatGetterEffectLevel;
+import se.mickelus.tetra.gui.stats.getter.TooltipGetterNone;
 import se.mickelus.tetra.items.modular.ModularItem;
+import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
 
 public class TenacityEffect {
     public static final ItemEffect tenacity_tool = ItemEffect.get("aetheric_tetranomicon:tenacity_tool");
@@ -140,6 +150,20 @@ public class TenacityEffect {
                 level.addFreshEntity(itemEntity);
             }
         }
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public static void addBars(FMLClientSetupEvent event) {
+        IStatGetter tenacityToolGetter = new StatGetterEffectLevel(tenacity_tool, 1.0);
+        GuiStatBar tenacityToolBar = new GuiStatBar(0, 0, 59, "tetra.stats.tenacity_tool", 0.0, 1.0, false, tenacityToolGetter, LabelGetterBasic.noLabel, new TooltipGetterNone("tetra.stats.tenacity_tool.tooltip"));
+
+        IStatGetter tenacityWeaponGetter = new StatGetterEffectLevel(tenacity_weapon, 1.0);
+        GuiStatBar tenacityWeaponBar = new GuiStatBar(0, 0, 59, "tetra.stats.tenacity_weapon", 0.0, 1.0, false, tenacityWeaponGetter, LabelGetterBasic.noLabel, new TooltipGetterNone("tetra.stats.tenacity_weapon.tooltip"));
+
+        WorkbenchStatsGui.addBar(tenacityToolBar);
+        HoloStatsGui.addBar(tenacityToolBar);
+        WorkbenchStatsGui.addBar(tenacityWeaponBar);
+        HoloStatsGui.addBar(tenacityWeaponBar);
     }
 
 }

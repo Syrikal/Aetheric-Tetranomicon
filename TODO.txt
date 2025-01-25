@@ -53,7 +53,16 @@ DONE: Add Skyjade ability
 DONE: Fix ambrosium infusion on swords
 DONE: Get it to work on servers
 
-TODO: Port Harvester for weapons to 1.20
-TODO: Port ambrosium infusion speed to 1.20
-TODO: Port Skyjade ability to 1.20
-TODO: Fix that GitHub bug
+DONE: Port Harvester for weapons to 1.20
+DONE: Port ambrosium infusion speed to 1.20
+DONE: Port Skyjade ability to 1.20
+DONE: Fix Levitator affecting the right blocks
+DONE: Fix that GitHub bug with Aether Redux removing things
+DONE: make arrow tagging use the event
+DONE: Check for more materials
+DONE: Fix Phoenix and Valkyrian Scrap in the menu
+
+DONE: Add bars for effects
+DONE: Check on servers
+DONE: make compatible with crafting add-on
+DONE: make Valkyrian tools drop Golden Amber

@@ -5,7 +5,9 @@ import com.syric.aetheric_tetranomicon.effects.*;
 import com.syric.aetheric_tetranomicon.registry.ATItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
@@ -32,12 +34,33 @@ public class AethericTetranomicon {
         MinecraftForge.EVENT_BUS.register(new PhoenixEffect());
         MinecraftForge.EVENT_BUS.register(new TenacityEffect());
         MinecraftForge.EVENT_BUS.register(new ValkyrieEffect());
-        MinecraftForge.EVENT_BUS.register(new VeridiumInfusionEffect());
+
+        if (ModList.get().isLoaded("aether_redux")) {
+            MinecraftForge.EVENT_BUS.register(new VeridiumInfusionEffect());
+        }
 
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         // Register the Deferred Register to the mod event bus so items get registered
         ATItems.ITEMS.register(modEventBus);
+        modEventBus.addListener(this::addBars);
+
+    }
+
+    private void addBars(final FMLClientSetupEvent event) {
+        AethericEffect.addBars(event);
+        AmbrosiaSeekerEffect.addBars(event);
+        BrittleEffect.addBars(event);
+        HarvesterEffect.addBars(event);
+        LevitatorEffect.addBars(event);
+        PhoenixEffect.addBars(event);
+        TenacityEffect.addBars(event);
+//        ValkyrieEffect.addBars(event);
+
+        if (ModList.get().isLoaded("aether_redux")) {
+            VeridiumInfusionEffect.addBars(event);
+        }
+
     }
 
 }
