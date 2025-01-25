@@ -61,3 +61,8 @@ DONE: Fix that GitHub bug with Aether Redux removing things
 DONE: make arrow tagging use the event
 DONE: Check for more materials
 DONE: Fix Phoenix and Valkyrian Scrap in the menu
+
+DONE: Add bars for effects
+DONE: Check on servers
+DONE: make compatible with crafting add-on
+DONE: make Valkyrian tools drop Golden Amber

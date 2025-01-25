@@ -7,6 +7,7 @@ import com.syric.aetheric_tetranomicon.util.ArrowUtil;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
@@ -40,6 +41,20 @@ public class AethericTetranomicon {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         // Register the Deferred Register to the mod event bus so items get registered
         ATItems.ITEMS.register(modEventBus);
+        modEventBus.addListener(this::addBars);
+
+    }
+
+    private void addBars(final FMLClientSetupEvent event) {
+        AethericEffect.addBars(event);
+        AmbrosiaSeekerEffect.addBars(event);
+        BrittleEffect.addBars(event);
+        HarvesterEffect.addBars(event);
+        LevitatorEffect.addBars(event);
+        PhoenixEffect.addBars(event);
+        TenacityEffect.addBars(event);
+//        ValkyrieEffect.addBars(event);
+        VeridiumInfusionEffect.addBars(event);
     }
 
 }

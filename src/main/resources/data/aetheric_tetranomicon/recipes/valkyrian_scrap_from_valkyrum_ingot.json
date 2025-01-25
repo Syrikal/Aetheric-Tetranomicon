@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "aether_treasure_reforging:valkyrum_ingot"
+    }
+  ],
+  "result": {
+    "item": "aetheric_tetranomicon:valkyrian_scrap",
+    "count": 3
+  }
+}

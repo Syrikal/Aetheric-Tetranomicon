@@ -12,11 +12,21 @@ import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import se.mickelus.tetra.blocks.workbench.gui.WorkbenchStatsGui;
 import se.mickelus.tetra.effect.ItemEffect;
+import se.mickelus.tetra.gui.stats.bar.GuiStatBar;
+import se.mickelus.tetra.gui.stats.getter.IStatGetter;
+import se.mickelus.tetra.gui.stats.getter.LabelGetterBasic;
+import se.mickelus.tetra.gui.stats.getter.StatGetterEffectLevel;
+import se.mickelus.tetra.gui.stats.getter.TooltipGetterNone;
 import se.mickelus.tetra.items.modular.ModularItem;
+import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
 
 public class AmbrosiaSeekerEffect {
     public static final ItemEffect ambrosia_seeker_tool = ItemEffect.get("aetheric_tetranomicon:ambrosia_seeker_tool");
@@ -105,5 +115,18 @@ public class AmbrosiaSeekerEffect {
         }
     }
 
+    @OnlyIn(Dist.CLIENT)
+    public static void addBars(FMLClientSetupEvent event) {
+        IStatGetter ambrosiaToolGetter = new StatGetterEffectLevel(ambrosia_seeker_tool, 1.0);
+        GuiStatBar ambrosiaToolBar = new GuiStatBar(0, 0, 59, "tetra.stats.ambrosia_tool", 0.0, 1.0, false, ambrosiaToolGetter, LabelGetterBasic.noLabel, new TooltipGetterNone("tetra.stats.ambrosia_tool.tooltip"));
+
+        IStatGetter ambrosiaWeaponGetter = new StatGetterEffectLevel(ambrosia_seeker_weapon, 1.0);
+        GuiStatBar ambrosiaWeaponBar = new GuiStatBar(0, 0, 59, "tetra.stats.ambrosia_weapon", 0.0, 1.0, false, ambrosiaWeaponGetter, LabelGetterBasic.noLabel, new TooltipGetterNone("tetra.stats.ambrosia_weapon.tooltip"));
+
+        WorkbenchStatsGui.addBar(ambrosiaToolBar);
+        HoloStatsGui.addBar(ambrosiaToolBar);
+        WorkbenchStatsGui.addBar(ambrosiaWeaponBar);
+        HoloStatsGui.addBar(ambrosiaWeaponBar);
+    }
 
 }

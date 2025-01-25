@@ -1,11 +1,20 @@
 {
     "type": "aether:enchanting",
-    "cookingtime": 1500,
+    "cookingtime": 1000,
     "ingredient": {
         "item": "aether:valkyrie_hoe"
     },
     "result": {
         "item": "aetheric_tetranomicon:valkyrian_scrap",
         "count": 3
-    }
+    },
+    "conditions": [
+        {
+            "type": "forge:not",
+            "value": {
+                "type": "forge:mod_loaded",
+                "modid": "aether_treasure_reforging"
+            }
+        }
+    ]
 }

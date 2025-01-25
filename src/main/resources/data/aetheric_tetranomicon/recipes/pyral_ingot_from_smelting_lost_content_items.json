@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "pyral_ingot_from_smelting",
+  "ingredient": [
+    {
+      "item": "lost_aether_content:phoenix_axe"
+    },
+    {
+      "item": "lost_aether_content:phoenix_cape"
+    },
+    {
+      "item": "lost_aether_content:phoenix_hoe"
+    },
+    {
+      "item": "lost_aether_content:phoenix_pickaxe"
+    },
+    {
+      "item": "lost_aether_content:phoenix_shovel"
+    },
+    {
+      "item": "lost_aether_content:phoenix_sword"
+    },
+    {
+      "item": "aether:phoenix_bow"
+    }
+  ],
+  "result": "aether_treasure_reforging:pyral_ingot",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "aether_treasure_reforging"
+    }
+  ]
+}

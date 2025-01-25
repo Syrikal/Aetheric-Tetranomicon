@@ -23,15 +23,25 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.TierSortingRegistry;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import se.mickelus.tetra.blocks.workbench.gui.WorkbenchStatsGui;
 import se.mickelus.tetra.effect.ItemEffect;
+import se.mickelus.tetra.gui.stats.bar.GuiStatBar;
+import se.mickelus.tetra.gui.stats.getter.IStatGetter;
+import se.mickelus.tetra.gui.stats.getter.LabelGetterBasic;
+import se.mickelus.tetra.gui.stats.getter.StatGetterEffectLevel;
+import se.mickelus.tetra.gui.stats.getter.TooltipGetterNone;
 import se.mickelus.tetra.items.modular.ItemModularHandheld;
 import se.mickelus.tetra.items.modular.ModularItem;
+import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
 import se.mickelus.tetra.util.TierHelper;
 import se.mickelus.tetra.util.ToolActionHelper;
 
@@ -217,6 +227,20 @@ public class LevitatorEffect {
             });
         }
         return false;
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public static void addBars(FMLClientSetupEvent event) {
+        IStatGetter levitatorToolGetter = new StatGetterEffectLevel(levitator_tool, 1.0);
+        GuiStatBar levitatorToolBar = new GuiStatBar(0, 0, 59, "tetra.stats.levitator_tool", 0.0, 1.0, false, levitatorToolGetter, LabelGetterBasic.noLabel, new TooltipGetterNone("tetra.stats.levitator_tool.tooltip"));
+
+        IStatGetter levitatorWeaponGetter = new StatGetterEffectLevel(levitator_weapon, 1.0);
+        GuiStatBar levitatorWeaponBar = new GuiStatBar(0, 0, 59, "tetra.stats.levitator_weapon", 0.0, 1.0, false, levitatorWeaponGetter, LabelGetterBasic.noLabel, new TooltipGetterNone("tetra.stats.levitator_weapon.tooltip"));
+
+        WorkbenchStatsGui.addBar(levitatorToolBar);
+        HoloStatsGui.addBar(levitatorToolBar);
+        WorkbenchStatsGui.addBar(levitatorWeaponBar);
+        HoloStatsGui.addBar(levitatorWeaponBar);
     }
 
 }
